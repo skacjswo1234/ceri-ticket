@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seri Ticket</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            min-height: 100%;
+            width: 100%;
+        }
+
+        body {
+            background-image: url('bg-color.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            position: relative;
+        }
+
+        .section {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        .section-1 {
+            min-height: 100vh;
+        }
+
+        .section-2 {
+            min-height: 100vh;
+        }
+
+        .main-text {
+            color: white;
+            font-weight: 700;
+            font-size: 2.5rem;
+            text-align: center;
+            animation: slideDown 1s ease-out;
+            line-height: 1.5;
+            position: absolute;
+            left: 50%;
+            top: 5%;
+            transform: translateX(-50%);
+            width: 100%;
+            padding: 0 2rem;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                top: -10%;
+                transform: translateX(-50%);
+            }
+            to {
+                opacity: 1;
+                top: 5%;
+                transform: translateX(-50%);
+            }
+        }
+
+        .main-text .seri-ticket {
+            animation: blinkHotPink 1.5s ease-in-out infinite;
+        }
+
+        @keyframes blinkHotPink {
+            0%, 100% {
+                color: white;
+            }
+            50% {
+                color: #FF69B4;
+            }
+        }
+
+        .badge-image {
+            position: absolute;
+            left: 50%;
+            top: 20%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 1200px;
+            animation: imageSlideUp 1s ease-out;
+            animation-delay: 1s;
+            animation-fill-mode: both;
+            opacity: 0;
+        }
+
+        .badge-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            position: relative;
+            z-index: 0;
+        }
+
+        @keyframes imageSlideUp {
+            from {
+                opacity: 0;
+                top: 110%;
+                transform: translateX(-50%);
+            }
+            to {
+                opacity: 1;
+                top: 20%;
+                transform: translateX(-50%);
+            }
+        }
+
+        .badge-image-2 {
+            position: absolute;
+            left: 50%;
+            top: 35%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 1200px;
+            animation: image2SlideUp 1s ease-out;
+            animation-delay: 1.5s;
+            animation-fill-mode: both;
+            opacity: 0;
+        }
+
+        .badge-image-2 img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        @keyframes image2SlideUp {
+            from {
+                opacity: 0;
+                top: 110%;
+                transform: translateX(-50%);
+            }
+            to {
+                opacity: 1;
+                top: 35%;
+                transform: translateX(-50%);
+            }
+        }
+
+        .badge-image-3 {
+            position: absolute;
+            left: 50%;
+            top: 10%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 1200px;
+            animation: image3SlideUp 1s ease-out;
+            animation-delay: 2s;
+            animation-fill-mode: both;
+            opacity: 0;
+        }
+
+        .badge-image-3 img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        @keyframes image3SlideUp {
+            from {
+                opacity: 0;
+                top: -10%;
+                transform: translateX(-50%);
+            }
+            to {
+                opacity: 1;
+                top: 10%;
+                transform: translateX(-50%);
+            }
+        }
+
+        .badge-image-4 {
+            position: absolute;
+            left: 50%;
+            top: 60%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 1200px;
+            animation: image4SlideUp 1s ease-out;
+            animation-delay: 2.5s;
+            animation-fill-mode: both;
+            opacity: 0;
+        }
+
+        .badge-image-4 img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        @keyframes image4SlideUp {
+            from {
+                opacity: 0;
+                top: 110%;
+                transform: translateX(-50%);
+            }
+            to {
+                opacity: 1;
+                top: 60%;
+                transform: translateX(-50%);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <section class="section section-1">
+        <div class="main-text">
+            모바일 상품권 매입 전문, <span class="seri-ticket">세리티켓</span>
+        </div>
+        <div class="badge-image">
+            <img src="images/images-1.png" alt="인증 배지">
+        </div>
+        <div class="badge-image-2">
+            <img src="images/images-2.png" alt="추가 이미지">
+        </div>
+    </section>
+    <section class="section section-2">
+        <div class="badge-image-3">
+            <img src="images/images-3.png" alt="경고 이미지">
+        </div>
+        <div class="badge-image-4">
+            <img src="images/images-4.png" alt="선택 이유 이미지">
+        </div>
+    </section>
+</body>
+</html>
+
