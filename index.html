@@ -245,6 +245,43 @@
             letter-spacing: 0.5px;
         }
 
+        /* Top 버튼 */
+        .top-button {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background: linear-gradient(135deg, #4fc3f7 0%, #29b6f6 100%);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(79, 195, 247, 0.4);
+            z-index: 9998;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            text-decoration: none;
+        }
+
+        .top-button.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .top-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(79, 195, 247, 0.6);
+        }
+
+        .top-icon {
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
         .ticker-title {
             text-align: center;
             color: #ffffff;
@@ -369,6 +406,14 @@
 
             .phone-number {
                 font-size: 1.1rem;
+            }
+
+            /* 모바일 Top 버튼 */
+            .top-button {
+                right: 20px;
+                bottom: 90px;
+                width: 50px;
+                height: 50px;
             }
         }
 
@@ -599,6 +644,10 @@
             display: none;
         }
 
+        .mobile-image-king {
+            display: none;
+        }
+
         /* 데스크톱에서 모바일 이미지 숨김 */
         @media (min-width: 769px) {
             .mobile-image-2,
@@ -607,7 +656,8 @@
             .mobile-image-5,
             .mobile-image-6,
             .mobile-image-7,
-            .mobile-image-8 {
+            .mobile-image-8,
+            .mobile-image-king {
                 display: none !important;
             }
         }
@@ -692,110 +742,73 @@
 
         @media (max-width: 768px) {
             .section {
-                min-height: 30vh;
+                min-height: 60vh;
                 padding: 2rem 0;
             }
 
             .section-1 {
-                min-height: 30vh;
+                min-height: auto;
+                padding-bottom: 2rem;
             }
 
             .section-2 {
-                min-height: 30vh;
+                min-height: 80vh;
             }
 
             .section-3 {
-                min-height: 30vh;
+                min-height: 60vh;
                 padding: 3rem 0;
             }
 
             .main-text {
                 font-size: 1.5rem;
-                top: 5%;
+                top: 2%;
                 padding: 0 1rem;
+                z-index: 100;
             }
 
             .badge-image {
-                top: 20%;
+                top: 0;
+                margin-top: 15%;
                 width: 95%;
-                transform: scale(2);
+                transform: none;
                 transform-origin: center top;
-            }
-
-            .section-gift {
-                min-height: 30vh;
-                padding: 2rem 0;
-            }
-
-            .section-4 {
-                min-height: 30vh;
-            }
-
-            .badge-image-5 {
-                top: 5%;
-                width: 95%;
-            }
-
-            .badge-image-5 .desktop-image-5 {
-                display: none;
-            }
-
-            .badge-image-5 .mobile-image-5 {
-                display: block;
-            }
-
-            .badge-image-2 {
-                top: 60%;
-                width: 95%;
-                transform: scale(2);
-                transform-origin: center top;
-            }
-
-            .badge-image-2 .desktop-image-2 {
-                display: none;
-            }
-
-            .badge-image-2 .mobile-image-2 {
-                display: block;
-            }
-
-            .badge-image-2 > div {
-                top: 16px !important;
-            }
-
-            .badge-image-3 {
-                top: 25%;
-                width: 95%;
-                transform: scale(2);
-                transform-origin: center top;
+                position: relative;
                 z-index: 1;
             }
 
-            .badge-image-3 .desktop-image-3 {
+            .badge-image .desktop-image-1 {
                 display: none;
             }
 
-            .badge-image-3 .mobile-image-3 {
+            .badge-image .mobile-image-king {
                 display: block;
+                width: 100%;
+                height: auto;
             }
 
-            .badge-image-3-1 {
-                display: none;
+            /* 모바일에서 다른 모든 이미지 숨김 */
+            .badge-image-2,
+            .badge-image-3,
+            .badge-image-4,
+            .badge-image-5,
+            .badge-image-6,
+            .badge-image-7,
+            .badge-image-8 {
+                display: none !important;
             }
 
-            .badge-image-4 {
-                top: 35%;
-                width: 95%;
-                transform: scale(2);
-                transform-origin: center top;
+            .section-gift {
+                display: none !important;
             }
 
-            .badge-image-4 .desktop-image-4 {
-                display: none;
-            }
-
-            .badge-image-4 .mobile-image-4 {
-                display: block;
+            .section-2,
+            .section-4,
+            .section-5,
+            .section-6 {
+                min-height: 0;
+                padding: 0;
+                display: none !important;
             }
 
             .partGalloryBox {
@@ -821,188 +834,71 @@
 
         @media (max-width: 480px) {
             .section {
-                min-height: 30vh;
+                min-height: 60vh;
                 padding: 1.5rem 0;
             }
 
             .section-1 {
-                min-height: 50vh;
+                min-height: auto;
+                padding-bottom: 2rem;
             }
 
             .section-2 {
-                min-height: 60vh;
+                min-height: 80vh;
             }
 
             .section-3 {
-                min-height: 30vh;
+                min-height: 60vh;
                 padding: 2rem 0;
             }
 
             .main-text {
                 font-size: 1.2rem;
-                top: 3%;
+                top: 2%;
+                z-index: 100;
             }
 
             .badge-image {
-                top: 18%;
-                transform: scale(2);
+                top: 0;
+                margin-top: 15%;
+                transform: none;
                 transform-origin: center top;
-            }
-
-            .section-gift {
-                min-height: 30vh;
-                padding: 1.5rem 0;
-            }
-
-            .section-4 {
-                min-height: 10vh;
-            }
-
-            .badge-image-5 {
-                top: 3%;
-                width: 95%;
-            }
-
-            .badge-image-5 .desktop-image-5 {
-                display: none;
-            }
-
-            .badge-image-5 .mobile-image-5 {
-                display: block;
-            }
-
-            .section-5 {
-                min-height: 30vh;
-            }
-
-            .badge-image-6 {
-                top: 1%;
-                width: 95%;
-                transform: scale(2);
-                transform-origin: center top;
-            }
-
-            .badge-image-6 .desktop-image-6 {
-                display: none;
-            }
-
-            .badge-image-6 .mobile-image-6 {
-                display: block;
-            }
-
-            .section-6 {
-                min-height: 60vh;
-            }
-
-            .badge-image-7 {
-                top: 5%;
-                width: 95%;
-                transform: scale(2);
-                transform-origin: center top;
-            }
-
-            .badge-image-7 .desktop-image-7 {
-                display: none;
-            }
-
-            .badge-image-7 .mobile-image-7 {
-                display: block;
-            }
-
-            .badge-image-8 {
-                top: 50%;
-                width: 95%;
-                transform: scale(2);
-                transform-origin: center top;
-            }
-
-            .badge-image-8 .desktop-image-8 {
-                display: none;
-            }
-
-            .badge-image-8 .mobile-image-8 {
-                display: block;
-            }
-
-            .badge-image-2 {
-                top: 55%;
-                transform: scale(2);
-                transform-origin: center top;
-            }
-
-            .badge-image-2 .desktop-image-2 {
-                display: none;
-            }
-
-            .badge-image-2 .mobile-image-2 {
-                display: block;
-            }
-
-            .badge-image-2 > div {
-                top: 16px !important;
-            }
-
-            .badge-image-3 {
-                top: 25%;
-                transform: scale(2);
-                transform-origin: center top;
+                position: relative;
                 z-index: 1;
             }
 
-            .badge-image-3 .desktop-image-3 {
+            .badge-image .desktop-image-1 {
                 display: none;
             }
 
-            .badge-image-3 .mobile-image-3 {
+            .badge-image .mobile-image-king {
                 display: block;
+                width: 100%;
+                height: auto;
             }
 
-            .badge-image-3-1 {
-                display: none;
-            }
-
-            .badge-image-4 {
-                top: 33%;
-                transform: scale(2);
-                transform-origin: center top;
-            }
-
-            .badge-image-4 .desktop-image-4 {
-                display: none;
-            }
-
-            .badge-image-4 .mobile-image-4 {
-                display: block;
-            }
-
-            .section-6 {
-                min-height: 100vh;
-            }
-
-            .badge-image-7 {
-                top: 3%;
-                width: 95%;
-            }
-
-            .badge-image-7 .desktop-image-7 {
-                display: none;
-            }
-
-            .badge-image-7 .mobile-image-7 {
-                display: block;
-            }
-
+            /* 모바일에서 다른 모든 이미지 숨김 */
+            .badge-image-2,
+            .badge-image-3,
+            .badge-image-4,
+            .badge-image-5,
+            .badge-image-6,
+            .badge-image-7,
             .badge-image-8 {
-                top: 48%;
-                width: 95%;
+                display: none !important;
             }
 
-            .badge-image-8 .desktop-image-8 {
-                display: none;
+            .section-gift {
+                display: none !important;
             }
 
-            .badge-image-8 .mobile-image-8 {
-                display: block;
+            .section-2,
+            .section-4,
+            .section-5,
+            .section-6 {
+                min-height: 0;
+                padding: 0;
+                display: none !important;
             }
 
             .partGalloryBox {
@@ -1029,7 +925,8 @@
             모바일 상품권 매입 전문, <span class="seri-ticket">세리티켓</span>
         </div>
         <div class="badge-image">
-            <img src="images/images-1.png" alt="인증 배지">
+            <img src="images/images-1.png" alt="인증 배지" class="desktop-image-1">
+            <img src="images/mob/images-king.png" alt="모바일 통합 이미지" class="mobile-image-king">
         </div>
         <div class="badge-image-2">
             <img src="images/images-2.png" alt="추가 이미지" class="desktop-image-2">
@@ -1134,6 +1031,11 @@
     <a href="tel:010-7715-1404" class="phone-button">
         <div class="phone-icon">📞</div>
         <div class="phone-number">010-7715-1404</div>
+    </a>
+
+    <!-- Top 버튼 -->
+    <a href="#" class="top-button" id="topButton">
+        <div class="top-icon">↑</div>
     </a>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -1297,6 +1199,27 @@
         // 전광판 초기화
         document.addEventListener('DOMContentLoaded', function() {
             createTickerItems();
+        });
+
+        // Top 버튼 기능
+        const topButton = document.getElementById('topButton');
+        
+        // 스크롤 시 버튼 표시/숨김
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                topButton.classList.add('show');
+            } else {
+                topButton.classList.remove('show');
+            }
+        });
+
+        // Top 버튼 클릭 시 맨 위로 스크롤
+        topButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
 
         // 첫 번째 섹션에서 폭죽 효과 실행 (3초마다 반복)
