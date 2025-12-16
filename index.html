@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seri Ticket</title>
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
     <style>
         * {
             margin: 0;
@@ -31,14 +33,343 @@
             position: relative;
             width: 100%;
             min-height: 100vh;
+            overflow: hidden;
         }
 
         .section-1 {
             min-height: 100vh;
+            overflow: hidden;
         }
 
         .section-2 {
-            min-height: 100vh;
+            min-height: 120vh;
+            position: relative;
+            overflow: visible;
+        }
+
+        .section-4 {
+            min-height: 60vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .badge-image-5 {
+            position: absolute;
+            left: 50%;
+            top: 5%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 1200px;
+            animation: image5SlideUp 1s ease-out;
+            animation-delay: 3s;
+            animation-fill-mode: both;
+            opacity: 0;
+        }
+
+        .badge-image-5 img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        @keyframes image5SlideUp {
+            from {
+                opacity: 0;
+                top: 110%;
+                transform: translateX(-50%);
+            }
+            to {
+                opacity: 1;
+                top: 5%;
+                transform: translateX(-50%);
+            }
+        }
+
+        .section-5 {
+            min-height: 50vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .badge-image-6 {
+            position: absolute;
+            left: 50%;
+            top: 2%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 1200px;
+            animation: image6SlideUp 1s ease-out;
+            animation-delay: 3.5s;
+            animation-fill-mode: both;
+            opacity: 0;
+        }
+
+        .badge-image-6 img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        @keyframes image6SlideUp {
+            from {
+                opacity: 0;
+                top: 110%;
+                transform: translateX(-50%);
+            }
+            to {
+                opacity: 1;
+                top: 2%;
+                transform: translateX(-50%);
+            }
+        }
+
+        .section-6 {
+            min-height: 120vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .badge-image-7 {
+            position: absolute;
+            left: 50%;
+            top: 5%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 1200px;
+            animation: image7SlideUp 1s ease-out;
+            animation-delay: 4s;
+            animation-fill-mode: both;
+            opacity: 0;
+        }
+
+        .badge-image-7 img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        @keyframes image7SlideUp {
+            from {
+                opacity: 0;
+                top: 110%;
+                transform: translateX(-50%);
+            }
+            to {
+                opacity: 1;
+                top: 5%;
+                transform: translateX(-50%);
+            }
+        }
+
+        .badge-image-8 {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 1200px;
+            animation: image8SlideUp 1s ease-out;
+            animation-delay: 4.5s;
+            animation-fill-mode: both;
+            opacity: 0;
+        }
+
+        .badge-image-8 img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        @keyframes image8SlideUp {
+            from {
+                opacity: 0;
+                top: 110%;
+                transform: translateX(-50%);
+            }
+            to {
+                opacity: 1;
+                top: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        .ticker-section {
+            position: relative;
+            width: 100%;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 2.5rem 0;
+            overflow: hidden;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* 전화 연결 버튼 */
+        .phone-button {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: linear-gradient(135deg, #FF69B4 0%, #FF1493 100%);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(255, 105, 180, 0.4);
+            z-index: 9999;
+            transition: all 0.3s ease;
+            min-width: 80px;
+            gap: 0.5rem;
+        }
+
+        .phone-button:hover {
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 6px 20px rgba(255, 105, 180, 0.6);
+        }
+
+        .phone-icon {
+            font-size: 1.8rem;
+            line-height: 1;
+        }
+
+        .phone-number {
+            font-size: 0.85rem;
+            font-weight: 600;
+            white-space: nowrap;
+            letter-spacing: 0.5px;
+        }
+
+        .ticker-title {
+            text-align: center;
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            letter-spacing: 0.5px;
+        }
+
+        .ticker-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            height: 350px;
+            overflow: hidden;
+            position: relative;
+            padding: 0 2rem;
+        }
+
+        .ticker-wrapper {
+            display: flex;
+            flex-direction: column;
+            animation: tickerScroll 50s linear infinite;
+        }
+
+        .ticker-item {
+            padding: 1.2rem 2rem;
+            margin: 0.25rem 0;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: #e0e0e0;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .ticker-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .ticker-item .time {
+            color: #4fc3f7;
+            font-weight: 600;
+            margin-right: 1.5rem;
+            min-width: 70px;
+            font-size: 0.9rem;
+        }
+
+        .ticker-item .content {
+            flex: 1;
+            color: #ffffff;
+        }
+
+        @keyframes tickerScroll {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(calc(-50% + 175px));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .ticker-title {
+                font-size: 1.1rem;
+                margin-bottom: 1.5rem;
+                padding: 0 1rem;
+            }
+
+            .ticker-container {
+                padding: 0 1rem;
+                height: 300px;
+            }
+
+            .ticker-item {
+                font-size: 0.85rem;
+                padding: 1rem 1rem;
+                justify-content: center;
+                text-align: center;
+                height: 55px;
+            }
+
+            .ticker-item .time {
+                min-width: 55px;
+                font-size: 0.8rem;
+                margin-right: 1rem;
+            }
+
+            /* 모바일 전화 버튼 */
+            .phone-button {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                top: auto;
+                transform: none;
+                width: 100%;
+                border-radius: 0;
+                flex-direction: row;
+                justify-content: center;
+                padding: 1.2rem 1.5rem;
+                min-width: auto;
+                box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
+            }
+
+            .phone-button:hover {
+                transform: none;
+            }
+
+            .phone-icon {
+                font-size: 1.5rem;
+                margin-right: 0.8rem;
+            }
+
+            .phone-number {
+                font-size: 1.1rem;
+            }
         }
 
         .main-text {
@@ -130,11 +461,32 @@
             opacity: 0;
         }
 
+        .section-gift {
+            min-height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 0;
+            overflow: hidden;
+        }
+
+        .gift-slider-container {
+            position: relative;
+            width: 90%;
+            max-width: 1600px;
+            padding: 2rem 0;
+        }
+
         .badge-image-2 img {
             width: 100%;
             height: auto;
             display: block;
             margin: 0 auto;
+        }
+
+        .mobile-image-2 {
+            display: none;
         }
 
         @keyframes image2SlideUp {
@@ -153,7 +505,7 @@
         .badge-image-3 {
             position: absolute;
             left: 50%;
-            top: 10%;
+            top: 5%;
             transform: translateX(-50%);
             width: 90%;
             max-width: 1200px;
@@ -170,15 +522,39 @@
             margin: 0 auto;
         }
 
+        .mobile-image-3 {
+            display: none;
+        }
+
+        .badge-image-3-1 {
+            position: absolute;
+            left: calc(50% - 600px - 20px);
+            top: 5%;
+            transform: translateY(0);
+            width: auto;
+            max-width: 300px;
+            animation: image3SlideUp 1s ease-out;
+            animation-delay: 2s;
+            animation-fill-mode: both;
+            opacity: 0;
+            z-index: 10;
+        }
+
+        .badge-image-3-1 img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
         @keyframes image3SlideUp {
             from {
                 opacity: 0;
-                top: -10%;
+                top: 110%;
                 transform: translateX(-50%);
             }
             to {
                 opacity: 1;
-                top: 10%;
+                top: 5%;
                 transform: translateX(-50%);
             }
         }
@@ -186,7 +562,7 @@
         .badge-image-4 {
             position: absolute;
             left: 50%;
-            top: 60%;
+            top: 35%;
             transform: translateX(-50%);
             width: 90%;
             max-width: 1200px;
@@ -203,6 +579,39 @@
             margin: 0 auto;
         }
 
+        .mobile-image-4 {
+            display: none;
+        }
+
+        .mobile-image-6 {
+            display: none;
+        }
+
+        .mobile-image-5 {
+            display: none;
+        }
+
+        .mobile-image-7 {
+            display: none;
+        }
+
+        .mobile-image-8 {
+            display: none;
+        }
+
+        /* 데스크톱에서 모바일 이미지 숨김 */
+        @media (min-width: 769px) {
+            .mobile-image-2,
+            .mobile-image-3,
+            .mobile-image-4,
+            .mobile-image-5,
+            .mobile-image-6,
+            .mobile-image-7,
+            .mobile-image-8 {
+                display: none !important;
+            }
+        }
+
         @keyframes image4SlideUp {
             from {
                 opacity: 0;
@@ -211,14 +620,410 @@
             }
             to {
                 opacity: 1;
-                top: 60%;
+                top: 35%;
                 transform: translateX(-50%);
+            }
+        }
+
+        .section-3 {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 4rem 0;
+            overflow: hidden;
+        }
+
+        .partGalloryBox {
+            position: relative;
+            left: auto;
+            top: auto;
+            transform: none;
+            width: 90%;
+            max-width: 1600px;
+            padding: 2rem 0;
+        }
+
+        .partGalloryBox > span {
+            color: white;
+            font-weight: 700;
+            font-size: 3.5rem;
+            text-align: center;
+            line-height: 1.5;
+            margin-bottom: 3rem;
+            width: 100%;
+            padding: 0 2rem;
+            margin-top: 2rem;
+        }
+
+        .swiper-container {
+            width: 100%;
+            padding: 2rem 0;
+            overflow: hidden;
+        }
+
+        .swiper-wrapper {
+            transition-timing-function: linear !important;
+        }
+
+        .swiper-slide {
+            width: auto;
+            height: auto;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gift-item {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .gift-item img {
+            width: 600px;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                min-height: 30vh;
+                padding: 2rem 0;
+            }
+
+            .section-1 {
+                min-height: 30vh;
+            }
+
+            .section-2 {
+                min-height: 30vh;
+            }
+
+            .section-3 {
+                min-height: 30vh;
+                padding: 3rem 0;
+            }
+
+            .main-text {
+                font-size: 1.5rem;
+                top: 5%;
+                padding: 0 1rem;
+            }
+
+            .badge-image {
+                top: 20%;
+                width: 95%;
+                transform: scale(2);
+                transform-origin: center top;
+            }
+
+            .section-gift {
+                min-height: 30vh;
+                padding: 2rem 0;
+            }
+
+            .section-4 {
+                min-height: 30vh;
+            }
+
+            .badge-image-5 {
+                top: 5%;
+                width: 95%;
+            }
+
+            .badge-image-5 .desktop-image-5 {
+                display: none;
+            }
+
+            .badge-image-5 .mobile-image-5 {
+                display: block;
+            }
+
+            .badge-image-2 {
+                top: 60%;
+                width: 95%;
+                transform: scale(2);
+                transform-origin: center top;
+            }
+
+            .badge-image-2 .desktop-image-2 {
+                display: none;
+            }
+
+            .badge-image-2 .mobile-image-2 {
+                display: block;
+            }
+
+            .badge-image-2 > div {
+                top: 16px !important;
+            }
+
+            .badge-image-3 {
+                top: 25%;
+                width: 95%;
+                transform: scale(2);
+                transform-origin: center top;
+                z-index: 1;
+            }
+
+            .badge-image-3 .desktop-image-3 {
+                display: none;
+            }
+
+            .badge-image-3 .mobile-image-3 {
+                display: block;
+            }
+
+            .badge-image-3-1 {
+                display: none;
+            }
+
+            .badge-image-4 {
+                top: 35%;
+                width: 95%;
+                transform: scale(2);
+                transform-origin: center top;
+            }
+
+            .badge-image-4 .desktop-image-4 {
+                display: none;
+            }
+
+            .badge-image-4 .mobile-image-4 {
+                display: block;
+            }
+
+            .partGalloryBox {
+                width: 95%;
+                padding: 2rem 0;
+            }
+
+            .partGalloryBox > span {
+                font-size: 2rem;
+                padding: 0 1rem;
+                margin-bottom: 2rem;
+                margin-top: 1rem;
+            }
+
+            .swiper-container {
+                padding: 1rem 0;
+            }
+
+            .gift-item img {
+                width: 350px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section {
+                min-height: 30vh;
+                padding: 1.5rem 0;
+            }
+
+            .section-1 {
+                min-height: 50vh;
+            }
+
+            .section-2 {
+                min-height: 60vh;
+            }
+
+            .section-3 {
+                min-height: 30vh;
+                padding: 2rem 0;
+            }
+
+            .main-text {
+                font-size: 1.2rem;
+                top: 3%;
+            }
+
+            .badge-image {
+                top: 18%;
+                transform: scale(2);
+                transform-origin: center top;
+            }
+
+            .section-gift {
+                min-height: 30vh;
+                padding: 1.5rem 0;
+            }
+
+            .section-4 {
+                min-height: 10vh;
+            }
+
+            .badge-image-5 {
+                top: 3%;
+                width: 95%;
+            }
+
+            .badge-image-5 .desktop-image-5 {
+                display: none;
+            }
+
+            .badge-image-5 .mobile-image-5 {
+                display: block;
+            }
+
+            .section-5 {
+                min-height: 30vh;
+            }
+
+            .badge-image-6 {
+                top: 1%;
+                width: 95%;
+                transform: scale(2);
+                transform-origin: center top;
+            }
+
+            .badge-image-6 .desktop-image-6 {
+                display: none;
+            }
+
+            .badge-image-6 .mobile-image-6 {
+                display: block;
+            }
+
+            .section-6 {
+                min-height: 60vh;
+            }
+
+            .badge-image-7 {
+                top: 5%;
+                width: 95%;
+                transform: scale(2);
+                transform-origin: center top;
+            }
+
+            .badge-image-7 .desktop-image-7 {
+                display: none;
+            }
+
+            .badge-image-7 .mobile-image-7 {
+                display: block;
+            }
+
+            .badge-image-8 {
+                top: 50%;
+                width: 95%;
+                transform: scale(2);
+                transform-origin: center top;
+            }
+
+            .badge-image-8 .desktop-image-8 {
+                display: none;
+            }
+
+            .badge-image-8 .mobile-image-8 {
+                display: block;
+            }
+
+            .badge-image-2 {
+                top: 55%;
+                transform: scale(2);
+                transform-origin: center top;
+            }
+
+            .badge-image-2 .desktop-image-2 {
+                display: none;
+            }
+
+            .badge-image-2 .mobile-image-2 {
+                display: block;
+            }
+
+            .badge-image-2 > div {
+                top: 16px !important;
+            }
+
+            .badge-image-3 {
+                top: 25%;
+                transform: scale(2);
+                transform-origin: center top;
+                z-index: 1;
+            }
+
+            .badge-image-3 .desktop-image-3 {
+                display: none;
+            }
+
+            .badge-image-3 .mobile-image-3 {
+                display: block;
+            }
+
+            .badge-image-3-1 {
+                display: none;
+            }
+
+            .badge-image-4 {
+                top: 33%;
+                transform: scale(2);
+                transform-origin: center top;
+            }
+
+            .badge-image-4 .desktop-image-4 {
+                display: none;
+            }
+
+            .badge-image-4 .mobile-image-4 {
+                display: block;
+            }
+
+            .section-6 {
+                min-height: 100vh;
+            }
+
+            .badge-image-7 {
+                top: 3%;
+                width: 95%;
+            }
+
+            .badge-image-7 .desktop-image-7 {
+                display: none;
+            }
+
+            .badge-image-7 .mobile-image-7 {
+                display: block;
+            }
+
+            .badge-image-8 {
+                top: 48%;
+                width: 95%;
+            }
+
+            .badge-image-8 .desktop-image-8 {
+                display: none;
+            }
+
+            .badge-image-8 .mobile-image-8 {
+                display: block;
+            }
+
+            .partGalloryBox {
+                padding: 1.5rem 0;
+            }
+
+            .partGalloryBox > span {
+                font-size: 1.8rem;
+                margin-bottom: 1.5rem;
+                margin-top: 0.5rem;
+            }
+
+            .gift-item img {
+                width: 250px;
             }
         }
 
     </style>
 </head>
 <body>
+    <!-- 히어로 섹션 -->
     <section class="section section-1">
         <div class="main-text">
             모바일 상품권 매입 전문, <span class="seri-ticket">세리티켓</span>
@@ -227,17 +1032,316 @@
             <img src="images/images-1.png" alt="인증 배지">
         </div>
         <div class="badge-image-2">
-            <img src="images/images-2.png" alt="추가 이미지">
+            <img src="images/images-2.png" alt="추가 이미지" class="desktop-image-2">
+            <img src="images/mob/images-2-m.png" alt="추가 이미지" class="mobile-image-2">
         </div>
     </section>
+
+    <!-- Gift 카드 섹션 -->
+    <section class="section section-gift">
+        <div class="gift-slider-container">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="gift-item">
+                            <img src="images/gift/happy.png" alt="해피머니">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="gift-item">
+                            <img src="images/gift/homeplus.png" alt="홈플러스">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="gift-item">
+                            <img src="images/gift/lotte.png" alt="롯데상품권">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="gift-item">
+                            <img src="images/gift/munhwa.png" alt="문화상품권">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="gift-item">
+                            <img src="images/gift/sinsae.png" alt="신세계 상품권">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="gift-item">
+                            <img src="images/gift/tmoney.png" alt="티머니">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2번째 섹션 -->
     <section class="section section-2">
+        <div class="badge-image-3-1">
+            <img src="images/images-3-1.gif" alt="경고 애니메이션">
+        </div>
         <div class="badge-image-3">
-            <img src="images/images-3.png" alt="경고 이미지">
+            <img src="images/images-3.png" alt="경고 이미지" class="desktop-image-3">
+            <img src="images/mob/images-3-m.png" alt="경고 이미지" class="mobile-image-3">
         </div>
         <div class="badge-image-4">
-            <img src="images/images-4.png" alt="선택 이유 이미지">
+            <img src="images/images-4.png" alt="선택 이유 이미지" class="desktop-image-4">
+            <img src="images/mob/images-4-m.png" alt="선택 이유 이미지" class="mobile-image-4">
         </div>
     </section>
+
+    <!-- 4번째 섹션 -->
+    <section class="section section-4">
+        <div class="badge-image-5">
+            <img src="images/images-5.png" alt="정직한 시세 약속" class="desktop-image-5">
+            <img src="images/mob/images-5-m.png" alt="정직한 시세 약속" class="mobile-image-5">
+        </div>
+    </section>
+
+    <!-- 5번째 섹션 -->
+    <section class="section section-5">
+        <div class="badge-image-6">
+            <img src="images/images-6.png" alt="공감대 형성" class="desktop-image-6">
+            <img src="images/mob/images-6-m.png" alt="공감대 형성" class="mobile-image-6">
+        </div>
+    </section>
+
+    <!-- 6번째 섹션 -->
+    <section class="section section-6">
+        <div class="badge-image-7">
+            <img src="images/images-7.png" alt="상품권 사기 경고" class="desktop-image-7">
+            <img src="images/mob/images-7-m.png" alt="상품권 사기 경고" class="mobile-image-7">
+        </div>
+        <div class="badge-image-8">
+            <img src="images/images-8.png" alt="보이스피싱 경고" class="desktop-image-8">
+            <img src="images/mob/images-8-m.png" alt="보이스피싱 경고" class="mobile-image-8">
+        </div>
+    </section>
+
+    <!-- 전광판 섹션 -->
+    <section class="ticker-section">
+        <div class="ticker-title">💰 금일 실시간 각종 모바일 상품권 매입 현황 💰</div>
+        <div class="ticker-container">
+            <div class="ticker-wrapper" id="tickerWrapper">
+                <!-- 더미 데이터는 JavaScript로 생성 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 전화 연결 버튼 -->
+    <a href="tel:010-7715-1404" class="phone-button">
+        <div class="phone-icon">📞</div>
+        <div class="phone-number">010-7715-1404</div>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const swiper = new Swiper('.swiper-container', {
+                slidesPerView: 'auto',
+                spaceBetween: 50,
+                loop: true,
+                loopedSlides: 6,
+                speed: 3000,
+                autoplay: {
+                    delay: 1,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: false,
+                },
+                allowTouchMove: true,
+                breakpoints: {
+                    320: {
+                        slidesPerView: 'auto',
+                        spaceBetween: 30,
+                    },
+                    768: {
+                        slidesPerView: 'auto',
+                        spaceBetween: 40,
+                    },
+                    1024: {
+                        slidesPerView: 'auto',
+                        spaceBetween: 50,
+                    },
+                },
+            });
+            
+            swiper.autoplay.start();
+        });
+
+        // 전광판 더미 데이터 생성
+        function createTickerItems() {
+            const tickerWrapper = document.getElementById('tickerWrapper');
+            const items = [
+                { time: '14:32', content: '컬쳐랜드 10만원권 매입완료 | 47,500원 | 서울' },
+                { time: '14:28', content: '티머니 5만원권 매입완료 | 23,750원 | 경기' },
+                { time: '14:25', content: '해피머니 20만원권 매입완료 | 95,000원 | 부산' },
+                { time: '14:20', content: '롯데상품권 10만원권 매입완료 | 47,500원 | 서울' },
+                { time: '14:15', content: '문화상품권 5만원권 매입완료 | 23,750원 | 경기' },
+                { time: '14:10', content: '신세계 상품권 10만원권 매입완료 | 47,500원 | 서울' },
+                { time: '14:05', content: '홈플러스 상품권 5만원권 매입완료 | 23,750원 | 경기' },
+                { time: '14:00', content: '컬쳐랜드 20만원권 매입완료 | 95,000원 | 부산' },
+                { time: '13:55', content: '티머니 10만원권 매입완료 | 47,500원 | 서울' },
+                { time: '13:50', content: '해피머니 5만원권 매입완료 | 23,750원 | 경기' },
+                { time: '13:45', content: '롯데상품권 20만원권 매입완료 | 95,000원 | 부산' },
+                { time: '13:40', content: '문화상품권 10만원권 매입완료 | 47,500원 | 서울' },
+                { time: '13:35', content: '신세계 상품권 5만원권 매입완료 | 23,750원 | 경기' },
+                { time: '13:30', content: '홈플러스 상품권 10만원권 매입완료 | 47,500원 | 서울' },
+                { time: '13:25', content: '컬쳐랜드 5만원권 매입완료 | 23,750원 | 경기' },
+                { time: '13:20', content: '티머니 20만원권 매입완료 | 95,000원 | 부산' },
+                { time: '13:15', content: '해피머니 10만원권 매입완료 | 47,500원 | 서울' },
+                { time: '13:10', content: '롯데상품권 5만원권 매입완료 | 23,750원 | 경기' },
+                { time: '13:05', content: '문화상품권 20만원권 매입완료 | 95,000원 | 부산' },
+                { time: '13:00', content: '신세계 상품권 10만원권 매입완료 | 47,500원 | 서울' },
+                { time: '12:55', content: '홈플러스 상품권 5만원권 매입완료 | 23,750원 | 경기' },
+                { time: '12:50', content: '컬쳐랜드 10만원권 매입완료 | 47,500원 | 서울' },
+                { time: '12:45', content: '티머니 5만원권 매입완료 | 23,750원 | 경기' },
+                { time: '12:40', content: '해피머니 20만원권 매입완료 | 95,000원 | 부산' },
+                { time: '12:35', content: '롯데상품권 10만원권 매입완료 | 47,500원 | 서울' },
+                { time: '12:30', content: '문화상품권 5만원권 매입완료 | 23,750원 | 경기' },
+                { time: '12:25', content: '신세계 상품권 20만원권 매입완료 | 95,000원 | 부산' },
+                { time: '12:20', content: '홈플러스 상품권 10만원권 매입완료 | 47,500원 | 서울' },
+                { time: '12:15', content: '컬쳐랜드 5만원권 매입완료 | 23,750원 | 경기' },
+                { time: '12:10', content: '티머니 10만원권 매입완료 | 47,500원 | 서울' },
+                { time: '12:05', content: '해피머니 5만원권 매입완료 | 23,750원 | 경기' },
+                { time: '12:00', content: '롯데상품권 20만원권 매입완료 | 95,000원 | 부산' },
+                { time: '11:55', content: '문화상품권 10만원권 매입완료 | 47,500원 | 서울' },
+                { time: '11:50', content: '신세계 상품권 5만원권 매입완료 | 23,750원 | 경기' },
+                { time: '11:45', content: '홈플러스 상품권 20만원권 매입완료 | 95,000원 | 부산' },
+                { time: '11:40', content: '컬쳐랜드 10만원권 매입완료 | 47,500원 | 서울' },
+                { time: '11:35', content: '티머니 5만원권 매입완료 | 23,750원 | 경기' },
+                { time: '11:30', content: '해피머니 10만원권 매입완료 | 47,500원 | 서울' },
+                { time: '11:25', content: '롯데상품권 5만원권 매입완료 | 23,750원 | 경기' },
+                { time: '11:20', content: '문화상품권 20만원권 매입완료 | 95,000원 | 부산' },
+                { time: '11:15', content: '신세계 상품권 10만원권 매입완료 | 47,500원 | 서울' },
+                { time: '11:10', content: '홈플러스 상품권 5만원권 매입완료 | 23,750원 | 경기' },
+                { time: '11:05', content: '컬쳐랜드 20만원권 매입완료 | 95,000원 | 부산' },
+                { time: '11:00', content: '티머니 10만원권 매입완료 | 47,500원 | 서울' },
+                { time: '10:55', content: '해피머니 5만원권 매입완료 | 23,750원 | 경기' },
+                { time: '10:50', content: '롯데상품권 10만원권 매입완료 | 47,500원 | 서울' },
+                { time: '10:45', content: '문화상품권 5만원권 매입완료 | 23,750원 | 경기' },
+                { time: '10:40', content: '신세계 상품권 20만원권 매입완료 | 95,000원 | 부산' },
+                { time: '10:35', content: '홈플러스 상품권 10만원권 매입완료 | 47,500원 | 서울' },
+                { time: '10:30', content: '컬쳐랜드 5만원권 매입완료 | 23,750원 | 경기' },
+                { time: '10:25', content: '티머니 20만원권 매입완료 | 95,000원 | 부산' },
+                { time: '10:20', content: '해피머니 10만원권 매입완료 | 47,500원 | 서울' },
+                { time: '10:15', content: '롯데상품권 5만원권 매입완료 | 23,750원 | 경기' },
+                { time: '10:10', content: '문화상품권 10만원권 매입완료 | 47,500원 | 서울' },
+                { time: '10:05', content: '신세계 상품권 5만원권 매입완료 | 23,750원 | 경기' },
+                { time: '10:00', content: '홈플러스 상품권 20만원권 매입완료 | 95,000원 | 부산' },
+                { time: '09:55', content: '컬쳐랜드 10만원권 매입완료 | 47,500원 | 인천' },
+                { time: '09:50', content: '티머니 5만원권 매입완료 | 23,750원 | 대구' },
+                { time: '09:45', content: '해피머니 20만원권 매입완료 | 95,000원 | 광주' },
+                { time: '09:40', content: '롯데상품권 10만원권 매입완료 | 47,500원 | 대전' },
+                { time: '09:35', content: '문화상품권 5만원권 매입완료 | 23,750원 | 울산' },
+                { time: '09:30', content: '신세계 상품권 10만원권 매입완료 | 47,500원 | 서울' },
+                { time: '09:25', content: '홈플러스 상품권 5만원권 매입완료 | 23,750원 | 경기' },
+                { time: '09:20', content: '컬쳐랜드 20만원권 매입완료 | 95,000원 | 부산' },
+                { time: '09:15', content: '티머니 10만원권 매입완료 | 47,500원 | 인천' },
+                { time: '09:10', content: '해피머니 5만원권 매입완료 | 23,750원 | 대구' },
+                { time: '09:05', content: '롯데상품권 20만원권 매입완료 | 95,000원 | 광주' },
+                { time: '09:00', content: '문화상품권 10만원권 매입완료 | 47,500원 | 대전' },
+                { time: '08:55', content: '신세계 상품권 5만원권 매입완료 | 23,750원 | 울산' },
+                { time: '08:50', content: '홈플러스 상품권 10만원권 매입완료 | 47,500원 | 서울' },
+                { time: '08:45', content: '컬쳐랜드 5만원권 매입완료 | 23,750원 | 경기' },
+                { time: '08:40', content: '티머니 20만원권 매입완료 | 95,000원 | 부산' },
+                { time: '08:35', content: '해피머니 10만원권 매입완료 | 47,500원 | 인천' },
+                { time: '08:30', content: '롯데상품권 5만원권 매입완료 | 23,750원 | 대구' },
+                { time: '08:25', content: '문화상품권 20만원권 매입완료 | 95,000원 | 광주' },
+                { time: '08:20', content: '신세계 상품권 10만원권 매입완료 | 47,500원 | 대전' },
+                { time: '08:15', content: '홈플러스 상품권 5만원권 매입완료 | 23,750원 | 울산' },
+                { time: '08:10', content: '컬쳐랜드 10만원권 매입완료 | 47,500원 | 서울' },
+                { time: '08:05', content: '티머니 5만원권 매입완료 | 23,750원 | 경기' },
+                { time: '08:00', content: '해피머니 20만원권 매입완료 | 95,000원 | 부산' },
+                { time: '07:55', content: '롯데상품권 10만원권 매입완료 | 47,500원 | 인천' },
+                { time: '07:50', content: '문화상품권 5만원권 매입완료 | 23,750원 | 대구' },
+                { time: '07:45', content: '신세계 상품권 20만원권 매입완료 | 95,000원 | 광주' },
+                { time: '07:40', content: '홈플러스 상품권 10만원권 매입완료 | 47,500원 | 대전' },
+                { time: '07:35', content: '컬쳐랜드 5만원권 매입완료 | 23,750원 | 울산' },
+                { time: '07:30', content: '티머니 10만원권 매입완료 | 47,500원 | 서울' },
+                { time: '07:25', content: '해피머니 5만원권 매입완료 | 23,750원 | 경기' },
+                { time: '07:20', content: '롯데상품권 20만원권 매입완료 | 95,000원 | 부산' },
+                { time: '07:15', content: '문화상품권 10만원권 매입완료 | 47,500원 | 인천' },
+                { time: '07:10', content: '신세계 상품권 5만원권 매입완료 | 23,750원 | 대구' },
+                { time: '07:05', content: '홈플러스 상품권 20만원권 매입완료 | 95,000원 | 광주' },
+                { time: '07:00', content: '컬쳐랜드 10만원권 매입완료 | 47,500원 | 대전' },
+                { time: '06:55', content: '티머니 5만원권 매입완료 | 23,750원 | 울산' },
+                { time: '06:50', content: '해피머니 10만원권 매입완료 | 47,500원 | 서울' },
+                { time: '06:45', content: '롯데상품권 5만원권 매입완료 | 23,750원 | 경기' },
+                { time: '06:40', content: '문화상품권 20만원권 매입완료 | 95,000원 | 부산' },
+                { time: '06:35', content: '신세계 상품권 10만원권 매입완료 | 47,500원 | 인천' },
+                { time: '06:30', content: '홈플러스 상품권 5만원권 매입완료 | 23,750원 | 대구' },
+                { time: '06:25', content: '컬쳐랜드 20만원권 매입완료 | 95,000원 | 광주' },
+                { time: '06:20', content: '티머니 10만원권 매입완료 | 47,500원 | 대전' },
+                { time: '06:15', content: '해피머니 5만원권 매입완료 | 23,750원 | 울산' },
+                { time: '06:10', content: '롯데상품권 10만원권 매입완료 | 47,500원 | 서울' },
+                { time: '06:05', content: '문화상품권 5만원권 매입완료 | 23,750원 | 경기' },
+                { time: '06:00', content: '신세계 상품권 20만원권 매입완료 | 95,000원 | 부산' },
+            ];
+
+            // 아이템을 두 번 복제하여 무한 스크롤 효과
+            const allItems = [...items, ...items];
+            
+            allItems.forEach(item => {
+                const tickerItem = document.createElement('div');
+                tickerItem.className = 'ticker-item';
+                tickerItem.innerHTML = `
+                    <span class="time">${item.time}</span>
+                    <span class="content">${item.content}</span>
+                `;
+                tickerWrapper.appendChild(tickerItem);
+            });
+        }
+
+        // 전광판 초기화
+        document.addEventListener('DOMContentLoaded', function() {
+            createTickerItems();
+        });
+
+        // 첫 번째 섹션에서 폭죽 효과 실행 (3초마다 반복)
+        window.addEventListener('load', function() {
+            // 약간의 딜레이 후 폭죽 효과 시작 (텍스트 애니메이션과 함께)
+            setTimeout(function() {
+                const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 9999 };
+
+                function randomInRange(min, max) {
+                    return Math.random() * (max - min) + min;
+                }
+
+                function fireConfetti() {
+                    const particleCount = 50;
+                    
+                    // 왼쪽에서 폭죽
+                    confetti({
+                        ...defaults,
+                        particleCount,
+                        origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 }
+                    });
+                    
+                    // 오른쪽에서 폭죽
+                    confetti({
+                        ...defaults,
+                        particleCount,
+                        origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 }
+                    });
+                    
+                    // 중앙에서 폭죽
+                    confetti({
+                        ...defaults,
+                        particleCount,
+                        origin: { x: randomInRange(0.4, 0.6), y: Math.random() - 0.2 }
+                    });
+                }
+
+                // 첫 번째 폭죽 즉시 실행
+                fireConfetti();
+
+                // 3초마다 폭죽 터뜨리기
+                setInterval(fireConfetti, 3000);
+            }, 500); // 텍스트 애니메이션 시작 후 0.5초 뒤에 폭죽 시작
+        });
+    </script>
 </body>
 </html>
 
