@@ -46,35 +46,183 @@
         }
 
         .section-2 {
-            display: none;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 0;
+        }
+
+        .section-3 {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 0;
         }
 
         .section-4 {
-            display: none;
-        }
-
-        .badge-image-5 {
-            display: none;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 0;
         }
 
         .section-5 {
-            display: none;
-        }
-
-        .badge-image-6 {
-            display: none;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 0;
         }
 
         .section-6 {
-            display: none;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 0;
         }
 
-        .badge-image-7 {
-            display: none;
+        .pc-image {
+            width: 100%;
+            max-width: 1920px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
         }
 
-        .badge-image-8 {
-            display: none;
+        .pc-image-desktop {
+            display: block;
+        }
+
+        .pc-image-mobile {
+            display: none !important;
+        }
+
+        /* 데스크탑에서 모바일 이미지 확실히 숨김 */
+        @media (min-width: 769px) {
+            .pc-image-mobile {
+                display: none !important;
+            }
+
+            .pc-image-desktop,
+            .desktop-image-1 {
+                display: block !important;
+            }
+        }
+
+        .section-promise {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 4rem 2rem;
+            background: transparent;
+        }
+
+        .promise-title {
+            color: white;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            width: 100%;
+        }
+
+        .promise-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .promise-card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .promise-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .promise-card-title {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .promise-card-description {
+            color: white;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 1024px) {
+            .promise-cards {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+                max-width: 900px;
+            }
+
+            .promise-title {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            .promise-card {
+                padding: 2rem;
+            }
+
+            .promise-card-title {
+                font-size: 1.3rem;
+            }
+
+            .promise-card-description {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .promise-cards {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                max-width: 100%;
+                padding: 0 1rem;
+            }
+
+            .promise-title {
+                font-size: 1.8rem;
+                margin-bottom: 2rem;
+                padding: 0 1rem;
+            }
+
+            .promise-card {
+                padding: 1.5rem;
+            }
+
+            .promise-card-title {
+                font-size: 1.2rem;
+            }
+
+            .promise-card-description {
+                font-size: 0.9rem;
+            }
         }
 
         .ticker-section {
@@ -119,6 +267,49 @@
         }
 
         .phone-number {
+            font-size: 0.85rem;
+            font-weight: 600;
+            white-space: nowrap;
+            letter-spacing: 0.5px;
+        }
+
+        .phone-text-mobile {
+            display: none;
+        }
+
+        /* 메시지 버튼 */
+        .message-button {
+            position: fixed;
+            right: 20px;
+            top: calc(50% - 100px);
+            transform: translateY(-50%);
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+            z-index: 9999;
+            transition: all 0.3s ease;
+            min-width: 80px;
+            gap: 0.5rem;
+        }
+
+        .message-button:hover {
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 6px 20px rgba(76, 175, 80, 0.6);
+        }
+
+        .message-icon {
+            font-size: 1.8rem;
+            line-height: 1;
+        }
+
+        .message-text {
             font-size: 0.85rem;
             font-weight: 600;
             white-space: nowrap;
@@ -233,6 +424,44 @@
         }
 
         @media (max-width: 768px) {
+            /* 모바일에서 이미지 전환 */
+            .pc-image-desktop {
+                display: none !important;
+            }
+
+            .pc-image-mobile {
+                display: block !important;
+            }
+
+            /* 모바일에서 약속 섹션 표시 */
+            .section-promise {
+                display: flex !important;
+                padding: 2rem 1rem;
+            }
+
+            .promise-title {
+                font-size: 1.5rem;
+                margin-bottom: 2rem;
+            }
+
+            .promise-cards {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                max-width: 100%;
+            }
+
+            .promise-card {
+                padding: 1.5rem;
+            }
+
+            .promise-card-title {
+                font-size: 1.2rem;
+            }
+
+            .promise-card-description {
+                font-size: 0.9rem;
+            }
+
             .ticker-title {
                 font-size: 1.1rem;
                 margin-bottom: 1.5rem;
@@ -263,29 +492,87 @@
                 position: fixed;
                 bottom: 0;
                 left: 0;
-                right: 0;
+                right: 50%;
                 top: auto;
                 transform: none;
-                width: 100%;
+                width: 50%;
                 border-radius: 0;
                 flex-direction: row;
                 justify-content: center;
-                padding: 1.2rem 1.5rem;
+                align-items: center;
+                padding: 1.5rem 1rem;
                 min-width: auto;
+                min-height: 60px;
                 box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
+                border-right: 1px solid rgba(255, 255, 255, 0.3);
+                border-top: none;
+                border-bottom: none;
+                border-left: none;
             }
 
             .phone-button:hover {
                 transform: none;
+                opacity: 0.9;
+            }
+
+            .phone-button:active {
+                opacity: 0.8;
             }
 
             .phone-icon {
-                font-size: 1.5rem;
+                font-size: 1.8rem;
                 margin-right: 0.8rem;
+                line-height: 1;
             }
 
             .phone-number {
+                display: none;
+            }
+
+            .phone-text-mobile {
                 font-size: 1.1rem;
+                font-weight: 600;
+                display: block;
+            }
+
+            /* 모바일 메시지 버튼 */
+            .message-button {
+                position: fixed;
+                bottom: 0;
+                left: 50%;
+                right: 0;
+                top: auto;
+                transform: none;
+                width: 50%;
+                border-radius: 0;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding: 1.5rem 1rem;
+                min-width: auto;
+                min-height: 60px;
+                box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
+                border: none;
+            }
+
+            .message-button:hover {
+                transform: none;
+                opacity: 0.9;
+            }
+
+            .message-button:active {
+                opacity: 0.8;
+            }
+
+            .message-icon {
+                font-size: 1.8rem;
+                margin-right: 0.8rem;
+                line-height: 1;
+            }
+
+            .message-text {
+                font-size: 1.1rem;
+                font-weight: 600;
             }
 
             /* 모바일 Top 버튼 */
@@ -511,15 +798,6 @@
                 padding-bottom: 2rem;
             }
 
-            .section-2 {
-                min-height: 80vh;
-            }
-
-            .section-3 {
-                min-height: 60vh;
-                padding: 3rem 0;
-            }
-
             .main-text {
                 font-size: 1.5rem;
                 top: 2%;
@@ -607,12 +885,13 @@
                 z-index: 1;
             }
 
-            .badge-image .desktop-image-1 {
-                display: none;
+            .badge-image .desktop-image-1,
+            .badge-image .pc-image-desktop {
+                display: none !important;
             }
 
-            .badge-image .mobile-image-king {
-                display: block;
+            .badge-image .pc-image-mobile {
+                display: block !important;
                 width: 100%;
                 height: auto;
             }
@@ -641,9 +920,62 @@
             당신의 든든한 금융파트너, <span class="seri-ticket">세리티켓</span>
         </div>
         <div class="badge-image">
-            <img src="images/pc/pc-king.png" alt="세리티켓 통합 이미지" class="desktop-image-1">
-            <img src="images/mob/mob-king.png" alt="모바일 통합 이미지" class="mobile-image-king">
+            <img src="images/pc/h-1.png" alt="세리티켓 이미지 1" class="desktop-image-1 pc-image-desktop">
+            <img src="images/mob/h-1-m.png" alt="세리티켓 이미지 1" class="pc-image-mobile">
         </div>
+    </section>
+
+    <!-- 2번째 섹션 -->
+    <section class="section section-2">
+        <img src="images/pc/h-2.png" alt="세리티켓 이미지 2" class="pc-image pc-image-desktop">
+        <img src="images/mob/h-2-m.png" alt="세리티켓 이미지 2" class="pc-image pc-image-mobile">
+    </section>
+
+    <!-- 3번째 섹션 -->
+    <section class="section section-3">
+        <img src="images/pc/h-3.png" alt="세리티켓 이미지 3" class="pc-image pc-image-desktop">
+        <img src="images/mob/h-3-m.png" alt="세리티켓 이미지 3" class="pc-image pc-image-mobile">
+    </section>
+
+    <!-- 약속 섹션 -->
+    <section class="section-promise">
+        <h2 class="promise-title">세리티켓의 4가지 약속</h2>
+        <div class="promise-cards">
+            <div class="promise-card">
+                <h3 class="promise-card-title">1. 간편한 신청</h3>
+                <p class="promise-card-description">복잡한 절차 없이 간단한 정보만으로 빠르게 신청할 수 있습니다. 온라인으로 24시간 언제든지 신청 가능합니다.</p>
+            </div>
+            <div class="promise-card">
+                <h3 class="promise-card-title">2. 투명한 수수료</h3>
+                <p class="promise-card-description">숨겨진 비용 없이 사전에 안내된 수수료 그대로 진행됩니다. 추가 비용이나 변동 수수료는 절대 없습니다.</p>
+            </div>
+            <div class="promise-card">
+                <h3 class="promise-card-title">3. 상시 상담지원</h3>
+                <p class="promise-card-description">궁금한 사항이 있으시면 언제든지 전문 상담사가 친절하게 도와드립니다. 고객 만족을 최우선으로 합니다.</p>
+            </div>
+            <div class="promise-card">
+                <h3 class="promise-card-title">4. 합법적인 진행</h3>
+                <p class="promise-card-description">모든 절차는 법적 규정을 준수하여 진행됩니다. 안전하고 신뢰할 수 있는 합법적인 서비스를 제공합니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4번째 섹션 -->
+    <section class="section section-4">
+        <img src="images/pc/h-4.png" alt="세리티켓 이미지 4" class="pc-image pc-image-desktop">
+        <img src="images/mob/h-4-m.png" alt="세리티켓 이미지 4" class="pc-image pc-image-mobile">
+    </section>
+
+    <!-- 5번째 섹션 -->
+    <section class="section section-5">
+        <img src="images/pc/h-5.png" alt="세리티켓 이미지 5" class="pc-image pc-image-desktop">
+        <img src="images/mob/h-5-m.png" alt="세리티켓 이미지 5" class="pc-image pc-image-mobile">
+    </section>
+
+    <!-- 6번째 섹션 -->
+    <section class="section section-6">
+        <img src="images/pc/h-6.png" alt="세리티켓 이미지 6" class="pc-image pc-image-desktop">
+        <img src="images/mob/h-6-m.png" alt="세리티켓 이미지 6" class="pc-image pc-image-mobile">
     </section>
 
     <!-- 전광판 섹션 -->
@@ -660,6 +992,13 @@
     <a href="tel:010-7715-1404" class="phone-button">
         <div class="phone-icon">📞</div>
         <div class="phone-number">010-7715-1404</div>
+        <span class="phone-text-mobile">전화하기</span>
+    </a>
+
+    <!-- 메시지 버튼 -->
+    <a href="sms:010-7715-1404" class="message-button">
+        <div class="message-icon">💬</div>
+        <div class="message-text">문자하기</div>
     </a>
 
     <!-- Top 버튼 -->
