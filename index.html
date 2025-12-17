@@ -37,164 +37,44 @@
         }
 
         .section-1 {
-            min-height: 100vh;
+            min-height: auto;
             overflow: hidden;
+            padding: 2rem 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .section-2 {
-            min-height: 120vh;
-            position: relative;
-            overflow: visible;
+            display: none;
         }
 
         .section-4 {
-            min-height: 60vh;
-            position: relative;
-            overflow: hidden;
+            display: none;
         }
 
         .badge-image-5 {
-            position: absolute;
-            left: 50%;
-            top: 5%;
-            transform: translateX(-50%);
-            width: 90%;
-            max-width: 1200px;
-            animation: image5SlideUp 1s ease-out;
-            animation-delay: 3s;
-            animation-fill-mode: both;
-            opacity: 0;
-        }
-
-        .badge-image-5 img {
-            width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-
-        @keyframes image5SlideUp {
-            from {
-                opacity: 0;
-                top: 110%;
-                transform: translateX(-50%);
-            }
-            to {
-                opacity: 1;
-                top: 5%;
-                transform: translateX(-50%);
-            }
+            display: none;
         }
 
         .section-5 {
-            min-height: 50vh;
-            position: relative;
-            overflow: hidden;
+            display: none;
         }
 
         .badge-image-6 {
-            position: absolute;
-            left: 50%;
-            top: 2%;
-            transform: translateX(-50%);
-            width: 90%;
-            max-width: 1200px;
-            animation: image6SlideUp 1s ease-out;
-            animation-delay: 3.5s;
-            animation-fill-mode: both;
-            opacity: 0;
-        }
-
-        .badge-image-6 img {
-            width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-
-        @keyframes image6SlideUp {
-            from {
-                opacity: 0;
-                top: 110%;
-                transform: translateX(-50%);
-            }
-            to {
-                opacity: 1;
-                top: 2%;
-                transform: translateX(-50%);
-            }
+            display: none;
         }
 
         .section-6 {
-            min-height: 120vh;
-            position: relative;
-            overflow: hidden;
+            display: none;
         }
 
         .badge-image-7 {
-            position: absolute;
-            left: 50%;
-            top: 5%;
-            transform: translateX(-50%);
-            width: 90%;
-            max-width: 1200px;
-            animation: image7SlideUp 1s ease-out;
-            animation-delay: 4s;
-            animation-fill-mode: both;
-            opacity: 0;
-        }
-
-        .badge-image-7 img {
-            width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-
-        @keyframes image7SlideUp {
-            from {
-                opacity: 0;
-                top: 110%;
-                transform: translateX(-50%);
-            }
-            to {
-                opacity: 1;
-                top: 5%;
-                transform: translateX(-50%);
-            }
+            display: none;
         }
 
         .badge-image-8 {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translateX(-50%);
-            width: 90%;
-            max-width: 1200px;
-            animation: image8SlideUp 1s ease-out;
-            animation-delay: 4.5s;
-            animation-fill-mode: both;
-            opacity: 0;
-        }
-
-        .badge-image-8 img {
-            width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-
-        @keyframes image8SlideUp {
-            from {
-                opacity: 0;
-                top: 110%;
-                transform: translateX(-50%);
-            }
-            to {
-                opacity: 1;
-                top: 50%;
-                transform: translateX(-50%);
-            }
+            display: none;
         }
 
         .ticker-section {
@@ -424,24 +304,23 @@
             text-align: center;
             animation: slideDown 1s ease-out;
             line-height: 1.5;
-            position: absolute;
-            left: 50%;
-            top: 5%;
-            transform: translateX(-50%);
+            position: relative;
+            left: auto;
+            top: auto;
+            transform: none;
             width: 100%;
-            padding: 0 2rem;
+            padding: 2rem;
+            margin-bottom: 0;
         }
 
         @keyframes slideDown {
             from {
                 opacity: 0;
-                top: -10%;
-                transform: translateX(-50%);
+                transform: translateY(-20px);
             }
             to {
                 opacity: 1;
-                top: 5%;
-                transform: translateX(-50%);
+                transform: translateY(0);
             }
         }
 
@@ -459,12 +338,18 @@
         }
 
         .badge-image {
-            position: absolute;
-            left: 50%;
-            top: 20%;
-            transform: translateX(-50%);
-            width: 90%;
-            max-width: 1200px;
+            position: relative;
+            left: auto;
+            top: auto;
+            transform: none;
+            width: 100%;
+            max-width: 1920px;
+            margin: 0 auto;
+            margin-top: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             animation: imageSlideUp 1s ease-out;
             animation-delay: 1s;
             animation-fill-mode: both;
@@ -472,7 +357,8 @@
         }
 
         .badge-image img {
-            width: 100%;
+            width: auto;
+            max-width: 100%;
             height: auto;
             display: block;
             margin: 0 auto;
@@ -483,37 +369,20 @@
         @keyframes imageSlideUp {
             from {
                 opacity: 0;
-                top: 110%;
-                transform: translateX(-50%);
+                transform: translateY(20px);
             }
             to {
                 opacity: 1;
-                top: 20%;
-                transform: translateX(-50%);
+                transform: translateY(0);
             }
         }
 
         .badge-image-2 {
-            position: absolute;
-            left: 50%;
-            top: 35%;
-            transform: translateX(-50%);
-            width: 90%;
-            max-width: 1200px;
-            animation: image2SlideUp 1s ease-out;
-            animation-delay: 1.5s;
-            animation-fill-mode: both;
-            opacity: 0;
+            display: none;
         }
 
         .section-gift {
-            min-height: 50vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem 0;
-            overflow: hidden;
+            display: none;
         }
 
         .gift-slider-container {
@@ -548,130 +417,21 @@
         }
 
         .badge-image-3 {
-            position: absolute;
-            left: 50%;
-            top: 5%;
-            transform: translateX(-50%);
-            width: 90%;
-            max-width: 1200px;
-            animation: image3SlideUp 1s ease-out;
-            animation-delay: 2s;
-            animation-fill-mode: both;
-            opacity: 0;
-        }
-
-        .badge-image-3 img {
-            width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-
-        .mobile-image-3 {
             display: none;
         }
 
         .badge-image-3-1 {
-            position: absolute;
-            left: calc(50% - 600px - 20px);
-            top: 5%;
-            transform: translateY(0);
-            width: auto;
-            max-width: 300px;
-            animation: image3SlideUp 1s ease-out;
-            animation-delay: 2s;
-            animation-fill-mode: both;
-            opacity: 0;
-            z-index: 10;
-        }
-
-        .badge-image-3-1 img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        @keyframes image3SlideUp {
-            from {
-                opacity: 0;
-                top: 110%;
-                transform: translateX(-50%);
-            }
-            to {
-                opacity: 1;
-                top: 5%;
-                transform: translateX(-50%);
-            }
+            display: none;
         }
 
         .badge-image-4 {
-            position: absolute;
-            left: 50%;
-            top: 35%;
-            transform: translateX(-50%);
-            width: 90%;
-            max-width: 1200px;
-            animation: image4SlideUp 1s ease-out;
-            animation-delay: 2.5s;
-            animation-fill-mode: both;
-            opacity: 0;
-        }
-
-        .badge-image-4 img {
-            width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-
-        .mobile-image-4 {
-            display: none;
-        }
-
-        .mobile-image-6 {
-            display: none;
-        }
-
-        .mobile-image-5 {
-            display: none;
-        }
-
-        .mobile-image-7 {
-            display: none;
-        }
-
-        .mobile-image-8 {
-            display: none;
-        }
-
-        .mobile-image-king {
             display: none;
         }
 
         /* 데스크톱에서 모바일 이미지 숨김 */
         @media (min-width: 769px) {
-            .mobile-image-2,
-            .mobile-image-3,
-            .mobile-image-4,
-            .mobile-image-5,
-            .mobile-image-6,
-            .mobile-image-7,
-            .mobile-image-8,
             .mobile-image-king {
                 display: none !important;
-            }
-        }
-
-        @keyframes image4SlideUp {
-            from {
-                opacity: 0;
-                top: 110%;
-                transform: translateX(-50%);
-            }
-            to {
-                opacity: 1;
-                top: 35%;
-                transform: translateX(-50%);
             }
         }
 
@@ -769,12 +529,15 @@
 
             .badge-image {
                 top: 0;
-                margin-top: 15%;
-                width: 95%;
+                margin-top: 0;
+                width: 100%;
                 transform: none;
                 transform-origin: center top;
                 position: relative;
                 z-index: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
 
             .badge-image .desktop-image-1 {
@@ -783,32 +546,9 @@
 
             .badge-image .mobile-image-king {
                 display: block;
-                width: 100%;
+                width: auto;
+                max-width: 100%;
                 height: auto;
-            }
-
-            /* 모바일에서 다른 모든 이미지 숨김 */
-            .badge-image-2,
-            .badge-image-3,
-            .badge-image-4,
-            .badge-image-5,
-            .badge-image-6,
-            .badge-image-7,
-            .badge-image-8 {
-                display: none !important;
-            }
-
-            .section-gift {
-                display: none !important;
-            }
-
-            .section-2,
-            .section-4,
-            .section-5,
-            .section-6 {
-                min-height: 0;
-                padding: 0;
-                display: none !important;
             }
 
             .partGalloryBox {
@@ -860,7 +600,7 @@
 
             .badge-image {
                 top: 0;
-                margin-top: 15%;
+                margin-top: 0;
                 transform: none;
                 transform-origin: center top;
                 position: relative;
@@ -875,30 +615,6 @@
                 display: block;
                 width: 100%;
                 height: auto;
-            }
-
-            /* 모바일에서 다른 모든 이미지 숨김 */
-            .badge-image-2,
-            .badge-image-3,
-            .badge-image-4,
-            .badge-image-5,
-            .badge-image-6,
-            .badge-image-7,
-            .badge-image-8 {
-                display: none !important;
-            }
-
-            .section-gift {
-                display: none !important;
-            }
-
-            .section-2,
-            .section-4,
-            .section-5,
-            .section-6 {
-                min-height: 0;
-                padding: 0;
-                display: none !important;
             }
 
             .partGalloryBox {
@@ -922,104 +638,17 @@
     <!-- 히어로 섹션 -->
     <section class="section section-1">
         <div class="main-text">
-            모바일 상품권 매입 전문, <span class="seri-ticket">세리티켓</span>
+            당신의 든든한 금융파트너, <span class="seri-ticket">세리티켓</span>
         </div>
         <div class="badge-image">
-            <img src="images/images-1.png" alt="인증 배지" class="desktop-image-1">
-            <img src="images/mob/images-king.png" alt="모바일 통합 이미지" class="mobile-image-king">
-        </div>
-        <div class="badge-image-2">
-            <img src="images/images-2.png" alt="추가 이미지" class="desktop-image-2">
-            <img src="images/mob/images-2-m.png" alt="추가 이미지" class="mobile-image-2">
-        </div>
-    </section>
-
-    <!-- Gift 카드 섹션 -->
-    <section class="section section-gift">
-        <div class="gift-slider-container">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="gift-item">
-                            <img src="images/gift/happy.png" alt="해피머니">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="gift-item">
-                            <img src="images/gift/homeplus.png" alt="홈플러스">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="gift-item">
-                            <img src="images/gift/lotte.png" alt="롯데상품권">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="gift-item">
-                            <img src="images/gift/munhwa.png" alt="문화상품권">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="gift-item">
-                            <img src="images/gift/sinsae.png" alt="신세계 상품권">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="gift-item">
-                            <img src="images/gift/tmoney.png" alt="티머니">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 2번째 섹션 -->
-    <section class="section section-2">
-        <div class="badge-image-3-1">
-            <img src="images/images-3-1.gif" alt="경고 애니메이션">
-        </div>
-        <div class="badge-image-3">
-            <img src="images/images-3.png" alt="경고 이미지" class="desktop-image-3">
-            <img src="images/mob/images-3-m.png" alt="경고 이미지" class="mobile-image-3">
-        </div>
-        <div class="badge-image-4">
-            <img src="images/images-4.png" alt="선택 이유 이미지" class="desktop-image-4">
-            <img src="images/mob/images-4-m.png" alt="선택 이유 이미지" class="mobile-image-4">
-        </div>
-    </section>
-
-    <!-- 4번째 섹션 -->
-    <section class="section section-4">
-        <div class="badge-image-5">
-            <img src="images/images-5.png" alt="정직한 시세 약속" class="desktop-image-5">
-            <img src="images/mob/images-5-m.png" alt="정직한 시세 약속" class="mobile-image-5">
-        </div>
-    </section>
-
-    <!-- 5번째 섹션 -->
-    <section class="section section-5">
-        <div class="badge-image-6">
-            <img src="images/images-6.png" alt="공감대 형성" class="desktop-image-6">
-            <img src="images/mob/images-6-m.png" alt="공감대 형성" class="mobile-image-6">
-        </div>
-    </section>
-
-    <!-- 6번째 섹션 -->
-    <section class="section section-6">
-        <div class="badge-image-7">
-            <img src="images/images-7.png" alt="상품권 사기 경고" class="desktop-image-7">
-            <img src="images/mob/images-7-m.png" alt="상품권 사기 경고" class="mobile-image-7">
-        </div>
-        <div class="badge-image-8">
-            <img src="images/images-8.png" alt="보이스피싱 경고" class="desktop-image-8">
-            <img src="images/mob/images-8-m.png" alt="보이스피싱 경고" class="mobile-image-8">
+            <img src="images/pc/pc-king.png" alt="세리티켓 통합 이미지" class="desktop-image-1">
+            <img src="images/mob/mob-king.png" alt="모바일 통합 이미지" class="mobile-image-king">
         </div>
     </section>
 
     <!-- 전광판 섹션 -->
     <section class="ticker-section">
-        <div class="ticker-title">💰 금일 실시간 각종 모바일 상품권 매입 현황 💰</div>
+        <div class="ticker-title">💰 금일 실시간 신용카드 현금화 현황 💰</div>
         <div class="ticker-container">
             <div class="ticker-wrapper" id="tickerWrapper">
                 <!-- 더미 데이터는 JavaScript로 생성 -->
@@ -1076,110 +705,110 @@
         function createTickerItems() {
             const tickerWrapper = document.getElementById('tickerWrapper');
             const items = [
-                { time: '14:32', content: '컬쳐랜드 10만원권 매입완료 | 47,500원 | 서울' },
-                { time: '14:28', content: '티머니 5만원권 매입완료 | 23,750원 | 경기' },
-                { time: '14:25', content: '해피머니 20만원권 매입완료 | 95,000원 | 부산' },
-                { time: '14:20', content: '롯데상품권 10만원권 매입완료 | 47,500원 | 서울' },
-                { time: '14:15', content: '문화상품권 5만원권 매입완료 | 23,750원 | 경기' },
-                { time: '14:10', content: '신세계 상품권 10만원권 매입완료 | 47,500원 | 서울' },
-                { time: '14:05', content: '홈플러스 상품권 5만원권 매입완료 | 23,750원 | 경기' },
-                { time: '14:00', content: '컬쳐랜드 20만원권 매입완료 | 95,000원 | 부산' },
-                { time: '13:55', content: '티머니 10만원권 매입완료 | 47,500원 | 서울' },
-                { time: '13:50', content: '해피머니 5만원권 매입완료 | 23,750원 | 경기' },
-                { time: '13:45', content: '롯데상품권 20만원권 매입완료 | 95,000원 | 부산' },
-                { time: '13:40', content: '문화상품권 10만원권 매입완료 | 47,500원 | 서울' },
-                { time: '13:35', content: '신세계 상품권 5만원권 매입완료 | 23,750원 | 경기' },
-                { time: '13:30', content: '홈플러스 상품권 10만원권 매입완료 | 47,500원 | 서울' },
-                { time: '13:25', content: '컬쳐랜드 5만원권 매입완료 | 23,750원 | 경기' },
-                { time: '13:20', content: '티머니 20만원권 매입완료 | 95,000원 | 부산' },
-                { time: '13:15', content: '해피머니 10만원권 매입완료 | 47,500원 | 서울' },
-                { time: '13:10', content: '롯데상품권 5만원권 매입완료 | 23,750원 | 경기' },
-                { time: '13:05', content: '문화상품권 20만원권 매입완료 | 95,000원 | 부산' },
-                { time: '13:00', content: '신세계 상품권 10만원권 매입완료 | 47,500원 | 서울' },
-                { time: '12:55', content: '홈플러스 상품권 5만원권 매입완료 | 23,750원 | 경기' },
-                { time: '12:50', content: '컬쳐랜드 10만원권 매입완료 | 47,500원 | 서울' },
-                { time: '12:45', content: '티머니 5만원권 매입완료 | 23,750원 | 경기' },
-                { time: '12:40', content: '해피머니 20만원권 매입완료 | 95,000원 | 부산' },
-                { time: '12:35', content: '롯데상품권 10만원권 매입완료 | 47,500원 | 서울' },
-                { time: '12:30', content: '문화상품권 5만원권 매입완료 | 23,750원 | 경기' },
-                { time: '12:25', content: '신세계 상품권 20만원권 매입완료 | 95,000원 | 부산' },
-                { time: '12:20', content: '홈플러스 상품권 10만원권 매입완료 | 47,500원 | 서울' },
-                { time: '12:15', content: '컬쳐랜드 5만원권 매입완료 | 23,750원 | 경기' },
-                { time: '12:10', content: '티머니 10만원권 매입완료 | 47,500원 | 서울' },
-                { time: '12:05', content: '해피머니 5만원권 매입완료 | 23,750원 | 경기' },
-                { time: '12:00', content: '롯데상품권 20만원권 매입완료 | 95,000원 | 부산' },
-                { time: '11:55', content: '문화상품권 10만원권 매입완료 | 47,500원 | 서울' },
-                { time: '11:50', content: '신세계 상품권 5만원권 매입완료 | 23,750원 | 경기' },
-                { time: '11:45', content: '홈플러스 상품권 20만원권 매입완료 | 95,000원 | 부산' },
-                { time: '11:40', content: '컬쳐랜드 10만원권 매입완료 | 47,500원 | 서울' },
-                { time: '11:35', content: '티머니 5만원권 매입완료 | 23,750원 | 경기' },
-                { time: '11:30', content: '해피머니 10만원권 매입완료 | 47,500원 | 서울' },
-                { time: '11:25', content: '롯데상품권 5만원권 매입완료 | 23,750원 | 경기' },
-                { time: '11:20', content: '문화상품권 20만원권 매입완료 | 95,000원 | 부산' },
-                { time: '11:15', content: '신세계 상품권 10만원권 매입완료 | 47,500원 | 서울' },
-                { time: '11:10', content: '홈플러스 상품권 5만원권 매입완료 | 23,750원 | 경기' },
-                { time: '11:05', content: '컬쳐랜드 20만원권 매입완료 | 95,000원 | 부산' },
-                { time: '11:00', content: '티머니 10만원권 매입완료 | 47,500원 | 서울' },
-                { time: '10:55', content: '해피머니 5만원권 매입완료 | 23,750원 | 경기' },
-                { time: '10:50', content: '롯데상품권 10만원권 매입완료 | 47,500원 | 서울' },
-                { time: '10:45', content: '문화상품권 5만원권 매입완료 | 23,750원 | 경기' },
-                { time: '10:40', content: '신세계 상품권 20만원권 매입완료 | 95,000원 | 부산' },
-                { time: '10:35', content: '홈플러스 상품권 10만원권 매입완료 | 47,500원 | 서울' },
-                { time: '10:30', content: '컬쳐랜드 5만원권 매입완료 | 23,750원 | 경기' },
-                { time: '10:25', content: '티머니 20만원권 매입완료 | 95,000원 | 부산' },
-                { time: '10:20', content: '해피머니 10만원권 매입완료 | 47,500원 | 서울' },
-                { time: '10:15', content: '롯데상품권 5만원권 매입완료 | 23,750원 | 경기' },
-                { time: '10:10', content: '문화상품권 10만원권 매입완료 | 47,500원 | 서울' },
-                { time: '10:05', content: '신세계 상품권 5만원권 매입완료 | 23,750원 | 경기' },
-                { time: '10:00', content: '홈플러스 상품권 20만원권 매입완료 | 95,000원 | 부산' },
-                { time: '09:55', content: '컬쳐랜드 10만원권 매입완료 | 47,500원 | 인천' },
-                { time: '09:50', content: '티머니 5만원권 매입완료 | 23,750원 | 대구' },
-                { time: '09:45', content: '해피머니 20만원권 매입완료 | 95,000원 | 광주' },
-                { time: '09:40', content: '롯데상품권 10만원권 매입완료 | 47,500원 | 대전' },
-                { time: '09:35', content: '문화상품권 5만원권 매입완료 | 23,750원 | 울산' },
-                { time: '09:30', content: '신세계 상품권 10만원권 매입완료 | 47,500원 | 서울' },
-                { time: '09:25', content: '홈플러스 상품권 5만원권 매입완료 | 23,750원 | 경기' },
-                { time: '09:20', content: '컬쳐랜드 20만원권 매입완료 | 95,000원 | 부산' },
-                { time: '09:15', content: '티머니 10만원권 매입완료 | 47,500원 | 인천' },
-                { time: '09:10', content: '해피머니 5만원권 매입완료 | 23,750원 | 대구' },
-                { time: '09:05', content: '롯데상품권 20만원권 매입완료 | 95,000원 | 광주' },
-                { time: '09:00', content: '문화상품권 10만원권 매입완료 | 47,500원 | 대전' },
-                { time: '08:55', content: '신세계 상품권 5만원권 매입완료 | 23,750원 | 울산' },
-                { time: '08:50', content: '홈플러스 상품권 10만원권 매입완료 | 47,500원 | 서울' },
-                { time: '08:45', content: '컬쳐랜드 5만원권 매입완료 | 23,750원 | 경기' },
-                { time: '08:40', content: '티머니 20만원권 매입완료 | 95,000원 | 부산' },
-                { time: '08:35', content: '해피머니 10만원권 매입완료 | 47,500원 | 인천' },
-                { time: '08:30', content: '롯데상품권 5만원권 매입완료 | 23,750원 | 대구' },
-                { time: '08:25', content: '문화상품권 20만원권 매입완료 | 95,000원 | 광주' },
-                { time: '08:20', content: '신세계 상품권 10만원권 매입완료 | 47,500원 | 대전' },
-                { time: '08:15', content: '홈플러스 상품권 5만원권 매입완료 | 23,750원 | 울산' },
-                { time: '08:10', content: '컬쳐랜드 10만원권 매입완료 | 47,500원 | 서울' },
-                { time: '08:05', content: '티머니 5만원권 매입완료 | 23,750원 | 경기' },
-                { time: '08:00', content: '해피머니 20만원권 매입완료 | 95,000원 | 부산' },
-                { time: '07:55', content: '롯데상품권 10만원권 매입완료 | 47,500원 | 인천' },
-                { time: '07:50', content: '문화상품권 5만원권 매입완료 | 23,750원 | 대구' },
-                { time: '07:45', content: '신세계 상품권 20만원권 매입완료 | 95,000원 | 광주' },
-                { time: '07:40', content: '홈플러스 상품권 10만원권 매입완료 | 47,500원 | 대전' },
-                { time: '07:35', content: '컬쳐랜드 5만원권 매입완료 | 23,750원 | 울산' },
-                { time: '07:30', content: '티머니 10만원권 매입완료 | 47,500원 | 서울' },
-                { time: '07:25', content: '해피머니 5만원권 매입완료 | 23,750원 | 경기' },
-                { time: '07:20', content: '롯데상품권 20만원권 매입완료 | 95,000원 | 부산' },
-                { time: '07:15', content: '문화상품권 10만원권 매입완료 | 47,500원 | 인천' },
-                { time: '07:10', content: '신세계 상품권 5만원권 매입완료 | 23,750원 | 대구' },
-                { time: '07:05', content: '홈플러스 상품권 20만원권 매입완료 | 95,000원 | 광주' },
-                { time: '07:00', content: '컬쳐랜드 10만원권 매입완료 | 47,500원 | 대전' },
-                { time: '06:55', content: '티머니 5만원권 매입완료 | 23,750원 | 울산' },
-                { time: '06:50', content: '해피머니 10만원권 매입완료 | 47,500원 | 서울' },
-                { time: '06:45', content: '롯데상품권 5만원권 매입완료 | 23,750원 | 경기' },
-                { time: '06:40', content: '문화상품권 20만원권 매입완료 | 95,000원 | 부산' },
-                { time: '06:35', content: '신세계 상품권 10만원권 매입완료 | 47,500원 | 인천' },
-                { time: '06:30', content: '홈플러스 상품권 5만원권 매입완료 | 23,750원 | 대구' },
-                { time: '06:25', content: '컬쳐랜드 20만원권 매입완료 | 95,000원 | 광주' },
-                { time: '06:20', content: '티머니 10만원권 매입완료 | 47,500원 | 대전' },
-                { time: '06:15', content: '해피머니 5만원권 매입완료 | 23,750원 | 울산' },
-                { time: '06:10', content: '롯데상품권 10만원권 매입완료 | 47,500원 | 서울' },
-                { time: '06:05', content: '문화상품권 5만원권 매입완료 | 23,750원 | 경기' },
-                { time: '06:00', content: '신세계 상품권 20만원권 매입완료 | 95,000원 | 부산' },
+                { time: '14:32', content: '삼성카드 100만원 현금화 완료 | 95만원 입금 | 서울' },
+                { time: '14:28', content: '신한카드 50만원 현금화 완료 | 47.5만원 입금 | 경기' },
+                { time: '14:25', content: 'KB카드 200만원 현금화 완료 | 190만원 입금 | 부산' },
+                { time: '14:20', content: '롯데카드 100만원 현금화 완료 | 95만원 입금 | 서울' },
+                { time: '14:15', content: '하나카드 50만원 현금화 완료 | 47.5만원 입금 | 경기' },
+                { time: '14:10', content: '현대카드 100만원 현금화 완료 | 95만원 입금 | 서울' },
+                { time: '14:05', content: 'BC카드 50만원 현금화 완료 | 47.5만원 입금 | 경기' },
+                { time: '14:00', content: '삼성카드 200만원 현금화 완료 | 190만원 입금 | 부산' },
+                { time: '13:55', content: '신한카드 100만원 현금화 완료 | 95만원 입금 | 서울' },
+                { time: '13:50', content: 'KB카드 50만원 현금화 완료 | 47.5만원 입금 | 경기' },
+                { time: '13:45', content: '롯데카드 200만원 현금화 완료 | 190만원 입금 | 부산' },
+                { time: '13:40', content: '하나카드 100만원 현금화 완료 | 95만원 입금 | 서울' },
+                { time: '13:35', content: '현대카드 50만원 현금화 완료 | 47.5만원 입금 | 경기' },
+                { time: '13:30', content: 'BC카드 100만원 현금화 완료 | 95만원 입금 | 서울' },
+                { time: '13:25', content: '삼성카드 50만원 현금화 완료 | 47.5만원 입금 | 경기' },
+                { time: '13:20', content: '신한카드 200만원 현금화 완료 | 190만원 입금 | 부산' },
+                { time: '13:15', content: 'KB카드 100만원 현금화 완료 | 95만원 입금 | 서울' },
+                { time: '13:10', content: '롯데카드 50만원 현금화 완료 | 47.5만원 입금 | 경기' },
+                { time: '13:05', content: '하나카드 200만원 현금화 완료 | 190만원 입금 | 부산' },
+                { time: '13:00', content: '현대카드 100만원 현금화 완료 | 95만원 입금 | 서울' },
+                { time: '12:55', content: 'BC카드 50만원 현금화 완료 | 47.5만원 입금 | 경기' },
+                { time: '12:50', content: '삼성카드 100만원 현금화 완료 | 95만원 입금 | 서울' },
+                { time: '12:45', content: '신한카드 50만원 현금화 완료 | 47.5만원 입금 | 경기' },
+                { time: '12:40', content: 'KB카드 200만원 현금화 완료 | 190만원 입금 | 부산' },
+                { time: '12:35', content: '롯데카드 100만원 현금화 완료 | 95만원 입금 | 서울' },
+                { time: '12:30', content: '하나카드 50만원 현금화 완료 | 47.5만원 입금 | 경기' },
+                { time: '12:25', content: '현대카드 200만원 현금화 완료 | 190만원 입금 | 부산' },
+                { time: '12:20', content: 'BC카드 100만원 현금화 완료 | 95만원 입금 | 서울' },
+                { time: '12:15', content: '삼성카드 50만원 현금화 완료 | 47.5만원 입금 | 경기' },
+                { time: '12:10', content: '신한카드 100만원 현금화 완료 | 95만원 입금 | 서울' },
+                { time: '12:05', content: 'KB카드 50만원 현금화 완료 | 47.5만원 입금 | 경기' },
+                { time: '12:00', content: '롯데카드 200만원 현금화 완료 | 190만원 입금 | 부산' },
+                { time: '11:55', content: '하나카드 100만원 현금화 완료 | 95만원 입금 | 서울' },
+                { time: '11:50', content: '현대카드 50만원 현금화 완료 | 47.5만원 입금 | 경기' },
+                { time: '11:45', content: 'BC카드 200만원 현금화 완료 | 190만원 입금 | 부산' },
+                { time: '11:40', content: '삼성카드 100만원 현금화 완료 | 95만원 입금 | 서울' },
+                { time: '11:35', content: '신한카드 50만원 현금화 완료 | 47.5만원 입금 | 경기' },
+                { time: '11:30', content: 'KB카드 100만원 현금화 완료 | 95만원 입금 | 서울' },
+                { time: '11:25', content: '롯데카드 50만원 현금화 완료 | 47.5만원 입금 | 경기' },
+                { time: '11:20', content: '하나카드 200만원 현금화 완료 | 190만원 입금 | 부산' },
+                { time: '11:15', content: '현대카드 100만원 현금화 완료 | 95만원 입금 | 서울' },
+                { time: '11:10', content: 'BC카드 50만원 현금화 완료 | 47.5만원 입금 | 경기' },
+                { time: '11:05', content: '삼성카드 200만원 현금화 완료 | 190만원 입금 | 부산' },
+                { time: '11:00', content: '신한카드 100만원 현금화 완료 | 95만원 입금 | 서울' },
+                { time: '10:55', content: 'KB카드 50만원 현금화 완료 | 47.5만원 입금 | 경기' },
+                { time: '10:50', content: '롯데카드 100만원 현금화 완료 | 95만원 입금 | 서울' },
+                { time: '10:45', content: '하나카드 50만원 현금화 완료 | 47.5만원 입금 | 경기' },
+                { time: '10:40', content: '현대카드 200만원 현금화 완료 | 190만원 입금 | 부산' },
+                { time: '10:35', content: 'BC카드 100만원 현금화 완료 | 95만원 입금 | 서울' },
+                { time: '10:30', content: '삼성카드 50만원 현금화 완료 | 47.5만원 입금 | 경기' },
+                { time: '10:25', content: '신한카드 200만원 현금화 완료 | 190만원 입금 | 부산' },
+                { time: '10:20', content: 'KB카드 100만원 현금화 완료 | 95만원 입금 | 서울' },
+                { time: '10:15', content: '롯데카드 50만원 현금화 완료 | 47.5만원 입금 | 경기' },
+                { time: '10:10', content: '하나카드 100만원 현금화 완료 | 95만원 입금 | 서울' },
+                { time: '10:05', content: '현대카드 50만원 현금화 완료 | 47.5만원 입금 | 경기' },
+                { time: '10:00', content: 'BC카드 200만원 현금화 완료 | 190만원 입금 | 부산' },
+                { time: '09:55', content: '삼성카드 100만원 현금화 완료 | 95만원 입금 | 인천' },
+                { time: '09:50', content: '신한카드 50만원 현금화 완료 | 47.5만원 입금 | 대구' },
+                { time: '09:45', content: 'KB카드 200만원 현금화 완료 | 190만원 입금 | 광주' },
+                { time: '09:40', content: '롯데카드 100만원 현금화 완료 | 95만원 입금 | 대전' },
+                { time: '09:35', content: '하나카드 50만원 현금화 완료 | 47.5만원 입금 | 울산' },
+                { time: '09:30', content: '현대카드 100만원 현금화 완료 | 95만원 입금 | 서울' },
+                { time: '09:25', content: 'BC카드 50만원 현금화 완료 | 47.5만원 입금 | 경기' },
+                { time: '09:20', content: '삼성카드 200만원 현금화 완료 | 190만원 입금 | 부산' },
+                { time: '09:15', content: '신한카드 100만원 현금화 완료 | 95만원 입금 | 인천' },
+                { time: '09:10', content: 'KB카드 50만원 현금화 완료 | 47.5만원 입금 | 대구' },
+                { time: '09:05', content: '롯데카드 200만원 현금화 완료 | 190만원 입금 | 광주' },
+                { time: '09:00', content: '하나카드 100만원 현금화 완료 | 95만원 입금 | 대전' },
+                { time: '08:55', content: '현대카드 50만원 현금화 완료 | 47.5만원 입금 | 울산' },
+                { time: '08:50', content: 'BC카드 100만원 현금화 완료 | 95만원 입금 | 서울' },
+                { time: '08:45', content: '삼성카드 50만원 현금화 완료 | 47.5만원 입금 | 경기' },
+                { time: '08:40', content: '신한카드 200만원 현금화 완료 | 190만원 입금 | 부산' },
+                { time: '08:35', content: 'KB카드 100만원 현금화 완료 | 95만원 입금 | 인천' },
+                { time: '08:30', content: '롯데카드 50만원 현금화 완료 | 47.5만원 입금 | 대구' },
+                { time: '08:25', content: '하나카드 200만원 현금화 완료 | 190만원 입금 | 광주' },
+                { time: '08:20', content: '현대카드 100만원 현금화 완료 | 95만원 입금 | 대전' },
+                { time: '08:15', content: 'BC카드 50만원 현금화 완료 | 47.5만원 입금 | 울산' },
+                { time: '08:10', content: '삼성카드 100만원 현금화 완료 | 95만원 입금 | 서울' },
+                { time: '08:05', content: '신한카드 50만원 현금화 완료 | 47.5만원 입금 | 경기' },
+                { time: '08:00', content: 'KB카드 200만원 현금화 완료 | 190만원 입금 | 부산' },
+                { time: '07:55', content: '롯데카드 100만원 현금화 완료 | 95만원 입금 | 인천' },
+                { time: '07:50', content: '하나카드 50만원 현금화 완료 | 47.5만원 입금 | 대구' },
+                { time: '07:45', content: '현대카드 200만원 현금화 완료 | 190만원 입금 | 광주' },
+                { time: '07:40', content: 'BC카드 100만원 현금화 완료 | 95만원 입금 | 대전' },
+                { time: '07:35', content: '삼성카드 50만원 현금화 완료 | 47.5만원 입금 | 울산' },
+                { time: '07:30', content: '신한카드 100만원 현금화 완료 | 95만원 입금 | 서울' },
+                { time: '07:25', content: 'KB카드 50만원 현금화 완료 | 47.5만원 입금 | 경기' },
+                { time: '07:20', content: '롯데카드 200만원 현금화 완료 | 190만원 입금 | 부산' },
+                { time: '07:15', content: '하나카드 100만원 현금화 완료 | 95만원 입금 | 인천' },
+                { time: '07:10', content: '현대카드 50만원 현금화 완료 | 47.5만원 입금 | 대구' },
+                { time: '07:05', content: 'BC카드 200만원 현금화 완료 | 190만원 입금 | 광주' },
+                { time: '07:00', content: '삼성카드 100만원 현금화 완료 | 95만원 입금 | 대전' },
+                { time: '06:55', content: '신한카드 50만원 현금화 완료 | 47.5만원 입금 | 울산' },
+                { time: '06:50', content: 'KB카드 100만원 현금화 완료 | 95만원 입금 | 서울' },
+                { time: '06:45', content: '롯데카드 50만원 현금화 완료 | 47.5만원 입금 | 경기' },
+                { time: '06:40', content: '하나카드 200만원 현금화 완료 | 190만원 입금 | 부산' },
+                { time: '06:35', content: '현대카드 100만원 현금화 완료 | 95만원 입금 | 인천' },
+                { time: '06:30', content: 'BC카드 50만원 현금화 완료 | 47.5만원 입금 | 대구' },
+                { time: '06:25', content: '삼성카드 200만원 현금화 완료 | 190만원 입금 | 광주' },
+                { time: '06:20', content: '신한카드 100만원 현금화 완료 | 95만원 입금 | 대전' },
+                { time: '06:15', content: 'KB카드 50만원 현금화 완료 | 47.5만원 입금 | 울산' },
+                { time: '06:10', content: '롯데카드 100만원 현금화 완료 | 95만원 입금 | 서울' },
+                { time: '06:05', content: '하나카드 50만원 현금화 완료 | 47.5만원 입금 | 경기' },
+                { time: '06:00', content: '현대카드 200만원 현금화 완료 | 190만원 입금 | 부산' },
             ];
 
             // 아이템을 두 번 복제하여 무한 스크롤 효과
