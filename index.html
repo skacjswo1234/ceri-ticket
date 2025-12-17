@@ -3,7 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seri Ticket</title>
+    
+    <!-- Primary Meta Tags -->
+    <title>세리티켓 - 신용카드 현금화 전문 서비스 | 빠르고 안전한 현금화</title>
+    <meta name="title" content="세리티켓 - 신용카드 현금화 전문 서비스 | 빠르고 안전한 현금화">
+    <meta name="description" content="세리티켓은 신용카드 현금화 전문 서비스입니다. 간편한 신청, 투명한 수수료, 상시 상담지원, 합법적인 진행을 약속합니다. 24시간 온라인 신청 가능.">
+    <meta name="keywords" content="신용카드 현금화, 카드 현금화, 세리티켓, 현금화 서비스, 카드 현금, 신용카드, 현금 전환, 빠른 현금화, 안전한 현금화">
+    <meta name="author" content="세리티켓">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Korean">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.seriticket.com/">
+    <meta property="og:title" content="세리티켓 - 신용카드 현금화 전문 서비스">
+    <meta property="og:description" content="간편한 신청, 투명한 수수료, 상시 상담지원, 합법적인 진행을 약속하는 신용카드 현금화 전문 서비스">
+    <meta property="og:image" content="https://www.seriticket.com/images/pc/h-1.png">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:site_name" content="세리티켓">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.seriticket.com/">
+    <meta property="twitter:title" content="세리티켓 - 신용카드 현금화 전문 서비스">
+    <meta property="twitter:description" content="간편한 신청, 투명한 수수료, 상시 상담지원, 합법적인 진행을 약속하는 신용카드 현금화 전문 서비스">
+    <meta property="twitter:image" content="https://www.seriticket.com/images/pc/h-1.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.seriticket.com/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
@@ -115,6 +149,145 @@
             .pc-image-desktop,
             .desktop-image-1 {
                 display: block !important;
+            }
+
+            /* 데스크탑에서 기존 버튼 숨김 */
+            .phone-button,
+            .message-button {
+                display: none !important;
+            }
+
+            /* 데스크탑 하단 배너 표시 */
+            .desktop-bottom-banner {
+                display: block !important;
+            }
+
+            .desktop-bottom-overlay {
+                display: flex !important;
+            }
+        }
+
+        /* 데스크탑 하단 배너 기본 스타일 */
+        .desktop-bottom-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 9999;
+            display: none;
+        }
+
+        .desktop-bottom-banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* 데스크탑 하단 투명 버튼 영역 기본 스타일 */
+        .desktop-bottom-overlay {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 10000;
+            display: none;
+            flex-direction: row;
+            pointer-events: none;
+            height: auto;
+        }
+
+        .desktop-bottom-overlay a {
+            flex: 1;
+            min-height: 100px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            pointer-events: auto;
+            text-decoration: none;
+            display: block;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .desktop-left-button {
+            border-right: none;
+        }
+
+        .desktop-right-button {
+            border-left: none;
+        }
+
+        /* 모바일 하단 배너 기본 스타일 */
+        .mobile-bottom-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 9999;
+            display: none;
+        }
+
+        .mobile-bottom-banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* 모바일 하단 투명 버튼 영역 기본 스타일 */
+        .mobile-bottom-overlay {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 10000;
+            display: none;
+            flex-direction: row;
+            pointer-events: none;
+            height: auto;
+        }
+
+        .mobile-bottom-overlay a {
+            flex: 1;
+            min-height: 80px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            pointer-events: auto;
+            text-decoration: none;
+            display: block;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .mobile-left-button {
+            border-right: none;
+        }
+
+        .mobile-right-button {
+            border-left: none;
+        }
+
+        /* 모바일에서 데스크탑 버튼 숨김 */
+        @media (max-width: 768px) {
+            .phone-button,
+            .message-button {
+                display: none !important;
+            }
+
+            .desktop-bottom-banner,
+            .desktop-bottom-overlay {
+                display: none !important;
+            }
+
+            .mobile-bottom-banner,
+            .mobile-bottom-overlay {
+                display: block !important;
+            }
+
+            .mobile-bottom-overlay {
+                display: flex !important;
             }
         }
 
@@ -487,92 +660,14 @@
                 margin-right: 1rem;
             }
 
-            /* 모바일 전화 버튼 */
-            .phone-button {
-                position: fixed;
-                bottom: 0;
-                left: 0;
-                right: 50%;
-                top: auto;
-                transform: none;
-                width: 50%;
-                border-radius: 0;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                padding: 1.5rem 1rem;
-                min-width: auto;
-                min-height: 60px;
-                box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
-                border-right: 1px solid rgba(255, 255, 255, 0.3);
-                border-top: none;
-                border-bottom: none;
-                border-left: none;
-            }
 
-            .phone-button:hover {
-                transform: none;
-                opacity: 0.9;
-            }
-
-            .phone-button:active {
-                opacity: 0.8;
-            }
-
-            .phone-icon {
-                font-size: 1.8rem;
-                margin-right: 0.8rem;
-                line-height: 1;
-            }
-
-            .phone-number {
-                display: none;
-            }
-
-            .phone-text-mobile {
-                font-size: 1.1rem;
-                font-weight: 600;
+            .mobile-bottom-banner,
+            .mobile-bottom-overlay {
                 display: block;
             }
 
-            /* 모바일 메시지 버튼 */
-            .message-button {
-                position: fixed;
-                bottom: 0;
-                left: 50%;
-                right: 0;
-                top: auto;
-                transform: none;
-                width: 50%;
-                border-radius: 0;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                padding: 1.5rem 1rem;
-                min-width: auto;
-                min-height: 60px;
-                box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
-                border: none;
-            }
-
-            .message-button:hover {
-                transform: none;
-                opacity: 0.9;
-            }
-
-            .message-button:active {
-                opacity: 0.8;
-            }
-
-            .message-icon {
-                font-size: 1.8rem;
-                margin-right: 0.8rem;
-                line-height: 1;
-            }
-
-            .message-text {
-                font-size: 1.1rem;
-                font-weight: 600;
+            .mobile-bottom-overlay {
+                display: flex;
             }
 
             /* 모바일 Top 버튼 */
@@ -988,18 +1083,40 @@
         </div>
     </section>
 
-    <!-- 전화 연결 버튼 -->
+    <!-- 데스크탑 전화 연결 버튼 -->
     <a href="tel:010-7715-1404" class="phone-button">
         <div class="phone-icon">📞</div>
         <div class="phone-number">010-7715-1404</div>
         <span class="phone-text-mobile">전화하기</span>
     </a>
 
-    <!-- 메시지 버튼 -->
+    <!-- 데스크탑 메시지 버튼 -->
     <a href="sms:010-7715-1404" class="message-button">
         <div class="message-icon">💬</div>
         <div class="message-text">문자하기</div>
     </a>
+
+    <!-- 모바일 하단 배너 이미지 -->
+    <div class="mobile-bottom-banner">
+        <img src="images/mob/hadan-m.png" alt="연락처 배너">
+    </div>
+
+    <!-- 모바일 하단 투명 버튼 오버레이 -->
+    <div class="mobile-bottom-overlay">
+        <a href="sms:010-7715-1404" class="mobile-left-button" aria-label="문자 발송"></a>
+        <a href="tel:010-7715-1404" class="mobile-right-button" aria-label="전화 걸기"></a>
+    </div>
+
+    <!-- 데스크탑 하단 배너 이미지 -->
+    <div class="desktop-bottom-banner">
+        <img src="images/pc/hadan.png" alt="연락처 배너">
+    </div>
+
+    <!-- 데스크탑 하단 투명 버튼 오버레이 -->
+    <div class="desktop-bottom-overlay">
+        <a href="sms:010-7715-1404" class="desktop-left-button" aria-label="문자 발송"></a>
+        <a href="tel:010-7715-1404" class="desktop-right-button" aria-label="전화 걸기"></a>
+    </div>
 
     <!-- Top 버튼 -->
     <a href="#" class="top-button" id="topButton">
@@ -1232,6 +1349,67 @@
                 setInterval(fireConfetti, 3000);
             }, 500); // 텍스트 애니메이션 시작 후 0.5초 뒤에 폭죽 시작
         });
+    </script>
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FinancialService",
+        "name": "세리티켓",
+        "alternateName": "Seri Ticket",
+        "description": "신용카드 현금화 전문 서비스. 간편한 신청, 투명한 수수료, 상시 상담지원, 합법적인 진행을 약속합니다.",
+        "url": "https://www.seriticket.com",
+        "telephone": "010-7715-1404",
+        "areaServed": "KR",
+        "serviceType": "신용카드 현금화",
+        "priceRange": "$$",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "KR"
+        },
+        "sameAs": [],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "150"
+        },
+        "offers": {
+            "@type": "Offer",
+            "description": "신용카드 현금화 서비스",
+            "availability": "https://schema.org/InStock"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "세리티켓",
+        "url": "https://www.seriticket.com",
+        "logo": "https://www.seriticket.com/images/pc/h-1.png",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "010-7715-1404",
+            "contactType": "customer service",
+            "availableLanguage": ["Korean"]
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "세리티켓",
+        "url": "https://www.seriticket.com",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.seriticket.com/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
     </script>
 </body>
 </html>
