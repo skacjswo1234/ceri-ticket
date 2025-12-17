@@ -2,5 +2,5 @@ User-agent: *
 Allow: /
 Disallow: /images/
 
-Sitemap: https://www.seriticket.com/sitemap.xml
+Sitemap: https://xn--oy2b11lcqm9wd.com/sitemap.xml
 
